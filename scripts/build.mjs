@@ -57,20 +57,20 @@ const anyPlaceholder = gallery.some(g => g.placeholder);
 const knob = `<div class="handle"><span class="knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>`;
 const pairHtml = (p, i) => `
           <figure>
-            <div class="ba aspect-[4/3] rounded-2xl bg-ink-2" style="--pos:50%" data-ba>
+            <div class="ba aspect-[4/3] rounded-md bg-ink-2" style="--pos:50%" data-ba>
               <img src="${esc(p.after)}" alt="After: ${esc(p.alt)}" loading="lazy" decoding="async">
               <img class="before" src="${esc(p.before)}" alt="Before: ${esc(p.alt)}" loading="lazy" decoding="async">
               ${knob}
-              <span class="absolute bottom-3 left-3 z-[3] rounded-full bg-white/90 text-ink text-xs font-semibold px-2.5 py-1">Before</span>
-              <span class="absolute bottom-3 right-3 z-[3] rounded-full bg-amber text-ink text-xs font-semibold px-2.5 py-1">After</span>
+              <span class="absolute bottom-3 left-3 z-[3] rounded-[3px] bg-white/90 text-ink text-xs font-semibold px-2.5 py-1">Before</span>
+              <span class="absolute bottom-3 right-3 z-[3] rounded-[3px] bg-brass-light text-ink text-xs font-semibold px-2.5 py-1">After</span>
               <input type="range" min="0" max="100" value="50" aria-label="Before and after comparison: ${esc(p.title || 'project ' + (i + 1))}">
             </div>
-            <figcaption class="mt-3 font-semibold semi text-lg">${esc(p.title || '')}${p.detail ? ` <span class="font-normal text-slatey">· ${esc(p.detail)}</span>` : ''}</figcaption>
+            <figcaption class="mt-3 font-medium text-lg">${esc(p.title || '')}${p.detail ? ` <span class="font-normal text-slatey">· ${esc(p.detail)}</span>` : ''}</figcaption>
           </figure>`;
 
 const present = Object.keys(CATEGORIES).filter(c => gallery.some(g => g.category === c));
 const filterBtn = (key, label, on) => `
-          <button type="button" class="shrink-0 h-11 px-5 rounded-full font-semibold text-[0.95rem] border-2 ${on ? 'border-ink bg-ink text-white' : 'border-ink/20 bg-white hover:border-ink'}" aria-pressed="${on}" data-filter="${key}">${esc(label)}</button>`;
+          <button type="button" class="shrink-0 h-11 mr-6 font-medium text-[0.95rem] border-b-2 ${on ? 'border-ink text-ink' : 'border-transparent text-slatey hover:text-ink'}" aria-pressed="${on}" data-filter="${key}">${esc(label)}</button>`;
 
 const tile = g => {
   const label = CATEGORIES[g.category] || '';
@@ -78,24 +78,24 @@ const tile = g => {
   const btn = g.size === 'large' ? 'h-full min-h-[260px]' : g.size === 'wide' ? 'h-full aspect-[2/1] lg:aspect-auto' : 'aspect-square';
   return `
           <li class="${li}" data-cat="${esc(g.category)}">
-            <button type="button" class="group relative block w-full ${btn} overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: ${esc(g.alt)}">
-              <img src="${esc(g.src)}" alt="${esc(g.alt)}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full ${btn} overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: ${esc(g.alt)}">
+              <img src="${esc(g.src)}" alt="${esc(g.alt)}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               ${g.placeholder ? PH('Placeholder') : ''}
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">${esc(g.caption || label)}</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">${esc(g.caption || label)}</span>
             </button>
           </li>`;
 };
 
 blocks.work = `<div class="reveal flex flex-col lg:flex-row lg:items-end gap-6 justify-between mb-10">
           <div>
-            <h2 id="work-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem]">Our work</h2>
+            <h2 id="work-title" class="display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem]">Our work</h2>
             <p class="mt-4 text-lg text-slatey max-w-[36rem] leading-relaxed">${pairs.length ? 'Drag the sliders to compare before and after, or tap any photo to see it full size.' : 'Tap any photo to see it full size.'}</p>
           </div>
           ${anyPlaceholder ? '<p class="text-sm text-slatey max-w-[24rem] lg:text-right">Photos shown are placeholders until real SHS project photos are added.</p>' : ''}
         </div>
 ${pairs.length ? `        <div class="grid ${pairs.length > 1 ? 'md:grid-cols-2' : 'max-w-3xl'} gap-5 mb-12">${pairs.map(pairHtml).join('')}
         </div>` : '        <!-- Before/after sliders appear here when pairs are added in content/photos.js -->'}
-${present.length > 1 ? `        <div style="overflow-x:auto" class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 mb-6 [scrollbar-width:none]" role="group" aria-label="Filter projects">${filterBtn('all', 'All', true)}${present.map(c => filterBtn(c, CATEGORIES[c], false)).join('')}
+${present.length > 1 ? `        <div style="overflow-x:auto" class="flex overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 mb-8 border-b border-ink/10 [scrollbar-width:none]" role="group" aria-label="Filter projects">${filterBtn('all', 'All', true)}${present.map(c => filterBtn(c, CATEGORIES[c], false)).join('')}
         </div>` : ''}
         <ul class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row-dense gap-3 sm:gap-4" data-gallery>${gallery.map(tile).join('')}
         </ul>
@@ -105,14 +105,14 @@ ${present.length > 1 ? `        <div style="overflow-x:auto" class="flex gap-2 o
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const fmtDate = d => { const m = /^(\d{4})-(\d{2})/.exec(d || ''); return m ? `${MONTHS[+m[2] - 1]} ${m[1]}` : ''; };
 const STAR = '<svg width="SZ" height="SZ" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 9.2 8.6 2 9.2l5.5 4.7L5.8 21 12 17.3 18.2 21l-1.7-7.1L22 9.2l-7.2-.6z"/></svg>';
-const stars = (n, size) => n ? `<div class="flex gap-0.5 text-amber mb-4" role="img" aria-label="${n} out of 5 stars">${STAR.replace(/SZ/g, size).repeat(n)}</div>` : '';
+const stars = (n, size) => n ? `<div class="flex gap-0.5 text-brass-light mb-4" role="img" aria-label="${n} out of 5 stars">${STAR.replace(/SZ/g, size).repeat(n)}</div>` : '';
 reviews.forEach((r, i) => {
   if (!r.quote) problems.push(`reviews[${i}]: missing "quote"`);
   if (r.rating != null && !(r.rating >= 1 && r.rating <= 5)) problems.push(`reviews[${i}]: rating must be 1-5 or null`);
   if (r.date && !/^\d{4}-\d{2}/.test(r.date)) problems.push(`reviews[${i}]: date must look like 2025-09`);
 });
 const meta = (r, dark) => {
-  const chip = dark ? 'rounded-full bg-white/10 px-3 py-1 font-semibold text-white' : 'rounded-full bg-primer px-3 py-1 font-semibold text-ink';
+  const chip = dark ? 'rounded-[3px] border border-white/25 px-2.5 py-0.5 font-medium text-white' : 'rounded-[3px] border border-ink/15 px-2.5 py-0.5 font-medium text-ink';
   const who = [r.author, fmtDate(r.date)].filter(Boolean).join(', ');
   return `<figcaption class="mt-auto pt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm ${dark ? 'text-white/75' : 'text-slatey'}">
               ${who ? `<span class="w-full font-semibold ${dark ? 'text-white' : 'text-ink'}">${esc(who)}</span>` : ''}
@@ -127,16 +127,16 @@ const card = (r, i) => {
   const last = i === others.length - 1;
   const span = [last && others.length > 2 && lgRem === 2 ? 'lg:col-span-2' : '', last && others.length > 2 && lgRem === 1 ? 'lg:col-span-3' : '', last && others.length % 2 === 1 ? 'md:col-span-2 lg:col-span-1' : ''].filter(Boolean).join(' ');
   return `
-          <figure class="bg-white rounded-2xl p-7 flex flex-col border border-ink/5 ${span}">
-            ${stars(r.rating, 16)}<blockquote class="leading-relaxed text-ink/90"><p>${r.verbatim ? '“' + esc(r.quote) + '”' : esc(r.quote)}</p></blockquote>
+          <figure class="bg-white rounded-md p-8 flex flex-col ${span}">
+            ${stars(r.rating, 16)}<blockquote class="serif text-[1.22rem] leading-relaxed text-ink"><p>${r.verbatim ? '“' + esc(r.quote) + '”' : esc(r.quote)}</p></blockquote>
             ${meta(r, false)}
           </figure>`;
 };
 const sources = [...new Set(reviews.filter(r => !r.verbatim).map(r => r.source))];
 blocks.reviews = featured ? `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          <figure class="lap text-white rounded-2xl p-7 sm:p-9 md:col-span-2 lg:col-span-2 ${others.length >= 2 ? 'lg:row-span-2' : ''} flex flex-col">
-            ${stars(featured.rating, 20)}${featured.headline ? `<p class="display font-extrabold text-[3.3rem] min-[400px]:text-[4rem] sm:text-[6rem] text-amber">“${esc(featured.headline)}”</p>` : ''}
-            <blockquote class="mt-4 text-xl sm:text-2xl leading-snug text-white/90 max-w-[34rem]"><p>${featured.verbatim ? '“' + esc(featured.quote) + '”' : esc(featured.quote)}</p></blockquote>
+          <figure class="lap text-white rounded-md p-7 sm:p-9 md:col-span-2 lg:col-span-2 ${others.length >= 2 ? 'lg:row-span-2' : ''} flex flex-col">
+            ${stars(featured.rating, 20)}${featured.headline ? `<p class="serif text-[3.4rem] sm:text-[5rem] leading-none text-brass-light">“${esc(featured.headline)}”</p>` : ''}
+            <blockquote class="serif mt-6 text-[1.45rem] sm:text-[1.8rem] leading-snug text-white/90 max-w-[34rem]"><p>${featured.verbatim ? '“' + esc(featured.quote) + '”' : esc(featured.quote)}</p></blockquote>
             ${meta(featured, true)}
           </figure>${others.map(card).join('')}
         </div>

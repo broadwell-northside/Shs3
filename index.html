@@ -26,9 +26,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <!-- BUILD:preload -->
-      <link rel="preload" as="image" href="/images/hero-farmhouse-siding.jpg" imagesrcset="/images/hero-farmhouse-siding-900.jpg 900w, /images/hero-farmhouse-siding.jpg 1920w" imagesizes="100vw">
+      <link rel="preload" as="image" href="/images/hero-estate-dusk.jpg" imagesrcset="/images/hero-estate-dusk-900.jpg 900w, /images/hero-estate-dusk.jpg 1920w" imagesizes="100vw">
       <!-- /BUILD:preload -->
 
   <script>document.documentElement.classList.add('js')</script>
@@ -85,218 +85,204 @@
 </head>
 
 <body class="antialiased pb-[76px] lg:pb-0">
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] bg-amber text-ink px-4 py-3 rounded-lg font-semibold">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] bg-brass-light text-ink px-4 py-3 rounded-lg font-semibold">Skip to content</a>
 
   <!-- ============ HEADER ============ -->
-  <header id="top" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-transparent transition-[border-color,box-shadow] duration-200" data-header>
-    <div class="max-w-site mx-auto px-4 sm:px-6 h-[68px] lg:h-[76px] flex items-center gap-3">
-      <a href="#top" class="flex items-center gap-2.5 shrink-0 mr-auto" aria-label="SHS &amp; Improvements, back to top">
-        <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" class="hidden min-[360px]:block shrink-0">
-          <rect width="40" height="40" rx="8" fill="#18232D"/>
-          <path d="M8 19 20 9l12 10" fill="none" stroke="#D2953A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 23h16M12 27.5h16M12 32h16" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".9"/>
+  <header id="top" class="fixed top-0 inset-x-0 z-50" data-header data-top="true">
+    <div class="max-w-site mx-auto px-4 sm:px-6 h-[68px] lg:h-[84px] flex items-center gap-3">
+      <a href="#top" class="flex items-center gap-3 shrink-0 mr-auto" aria-label="SHS &amp; Improvements, back to top">
+        <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true" class="hidden min-[360px]:block shrink-0">
+          <rect width="40" height="40" rx="3" fill="#151D25"/>
+          <path d="M8 19 20 9l12 10" fill="none" stroke="#B8946A" stroke-width="2.4" stroke-linecap="square"/>
+          <path d="M12 23.5h16M12 27.5h16M12 31.5h16" stroke="#fff" stroke-width="1.6" opacity=".85"/>
         </svg>
         <span class="leading-none">
-          <span class="display block text-[1.35rem] font-extrabold tracking-tight">SHS <span class="font-semibold">&amp; Improvements</span></span>
-          <span class="hidden sm:block text-[0.7rem] text-slatey mt-1">Woodstock, GA</span>
+          <span class="wordmark block text-[1.12rem]">SHS <span class="opacity-80">&amp; Improvements</span></span>
+          <span class="hdr-sub hidden sm:block text-[0.72rem] mt-1.5 tracking-wide">Woodstock, Georgia</span>
         </span>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 whitespace-nowrap text-[0.95rem] font-medium lg:ml-4" aria-label="Primary">
-        <a href="#services" class="hover:text-amber-deep transition-colors">Services</a>
-        <a href="#colors" class="hover:text-amber-deep transition-colors">Colors</a>
-        <a href="#why" class="hover:text-amber-deep transition-colors">Why SHS</a>
-        <a href="#work" class="hover:text-amber-deep transition-colors">Our work</a>
-        <a href="#about" class="hover:text-amber-deep transition-colors">About</a>
-        <a href="#reviews" class="hover:text-amber-deep transition-colors">Reviews</a>
-        <a href="#quote" class="hover:text-amber-deep transition-colors">Free quote</a>
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 whitespace-nowrap text-[0.92rem] lg:ml-4" aria-label="Primary">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#colors" class="nav-link">Colors</a>
+        <a href="#why" class="nav-link">Why SHS</a>
+        <a href="#work" class="nav-link">Our work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#quote" class="nav-link">Free quote</a>
       </nav>
 
-      <a href="tel:+14049967297" class="shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-ink text-white w-11 min-[380px]:w-auto min-[380px]:pl-3.5 min-[380px]:pr-4 h-11 font-semibold text-[0.95rem] hover:bg-ink-3 transition-colors lg:ml-4">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      <a href="tel:+14049967297" class="hdr-call press shrink-0 inline-flex items-center justify-center gap-2 rounded-[3px] w-11 min-[380px]:w-auto min-[380px]:px-4 h-11 text-[0.92rem] font-medium lg:ml-5">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
         <span class="hidden min-[480px]:inline">(404) 996-7297</span><span class="hidden min-[380px]:inline min-[480px]:hidden">Call</span><span class="sr-only min-[380px]:hidden">Call (404) 996-7297</span>
       </a>
 
-      <button type="button" class="shrink-0 lg:hidden inline-grid place-items-center w-11 h-11 rounded-full border border-ink/15 hover:bg-primer" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" data-menu-btn>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" data-icon-open/><path d="M6 6l12 12M18 6 6 18" class="hidden" data-icon-close/></svg>
+      <button type="button" class="hdr-menu press shrink-0 lg:hidden inline-grid place-items-center w-11 h-11 rounded-[3px]" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" data-menu-btn>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16" data-icon-open/><path d="M6 6l12 12M18 6 6 18" class="hidden" data-icon-close/></svg>
       </button>
     </div>
 
-    <div id="mobile-menu" class="lg:hidden hidden border-t border-ink/10 bg-white" data-menu>
-      <nav class="max-w-site mx-auto px-4 py-3 flex flex-col text-lg font-medium" aria-label="Mobile">
-        <a href="#services" class="py-3.5 border-b border-ink/5">Services</a>
-        <a href="#colors" class="py-3.5 border-b border-ink/5">Try siding colors</a>
-        <a href="#why" class="py-3.5 border-b border-ink/5">Why SHS</a>
-        <a href="#work" class="py-3.5 border-b border-ink/5">Our work</a>
-        <a href="#about" class="py-3.5 border-b border-ink/5">About Erick &amp; team</a>
-        <a href="#reviews" class="py-3.5 border-b border-ink/5">Reviews</a>
-        <a href="#quote" class="mt-4 mb-2 text-center rounded-full bg-amber text-ink font-semibold py-3.5">Get a free quote</a>
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-ink/10 bg-white text-ink" data-menu>
+      <nav class="max-w-site mx-auto px-4 py-3 flex flex-col text-[1.15rem]" aria-label="Mobile">
+        <a href="#services" class="py-4 border-b border-ink/10">Services</a>
+        <a href="#colors" class="py-4 border-b border-ink/10">Try siding colors</a>
+        <a href="#why" class="py-4 border-b border-ink/10">Why SHS</a>
+        <a href="#work" class="py-4 border-b border-ink/10">Our work</a>
+        <a href="#about" class="py-4 border-b border-ink/10">About Erick &amp; team</a>
+        <a href="#reviews" class="py-4 border-b border-ink/10">Reviews</a>
+        <a href="#quote" class="press mt-5 mb-3 text-center rounded-[3px] bg-ink text-white font-medium py-4">Get a free quote</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <!-- ============ HERO ============ -->
-    <section class="relative isolate overflow-hidden bg-ink text-white" aria-labelledby="hero-title">
+    <section class="relative isolate overflow-hidden bg-ink text-white min-h-[100svh] flex flex-col" aria-labelledby="hero-title">
       <!-- Photo set in content/photos.js (hero) -->
       <!-- BUILD:hero -->
       <picture>
-        <source media="(max-width: 767px)" srcset="/images/hero-farmhouse-siding-900.jpg">
-        <img src="/images/hero-farmhouse-siding.jpg" alt="White two-story farmhouse with horizontal lap siding and a wraparound front porch" class="hero-img absolute inset-0 -z-10 h-full w-full object-cover object-[60%_center]" fetchpriority="high" decoding="async">
+        <source media="(max-width: 767px)" srcset="/images/hero-estate-dusk-900.jpg">
+        <img src="/images/hero-estate-dusk.jpg" alt="Stately two-story home with stone and siding, lit up at dusk above a wide lawn" class="hero-img absolute inset-0 -z-10 h-full w-full object-cover object-[60%_center]" fetchpriority="high" decoding="async">
       </picture>
       <!-- /BUILD:hero -->
-      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/75 to-ink/20 md:bg-gradient-to-r md:from-ink/95 md:via-ink/70 md:to-ink/5"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/95 via-ink/45 to-ink/35 md:bg-gradient-to-r md:from-ink/85 md:via-ink/45 md:to-ink/10"></div>
+      <div class="absolute inset-x-0 top-0 h-40 -z-10 bg-gradient-to-b from-ink/60 to-transparent"></div>
       <!-- BUILD:heroTag -->
       <span class="ph !top-auto !bottom-3 !left-auto right-3">Placeholder photo</span>
       <!-- /BUILD:heroTag -->
 
-      <div class="max-w-site mx-auto px-4 sm:px-6 pt-36 pb-14 sm:pt-44 md:py-32 lg:py-40 min-h-[86svh] md:min-h-0 flex flex-col justify-end md:block">
-        <p class="rise text-amber-soft/90 font-medium text-[0.95rem] mb-5 flex items-center gap-2">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D2953A" aria-hidden="true"><path d="M12 2 9.2 8.6 2 9.2l5.5 4.7L5.8 21 12 17.3 18.2 21l-1.7-7.1L22 9.2l-7.2-.6z"/></svg>
-          Referred by neighbors on Nextdoor
-        </p>
-        <h1 id="hero-title" class="rise d1 display font-extrabold text-[2.9rem] min-[400px]:text-[3.2rem] sm:text-[4.4rem] lg:text-[5.6rem] max-w-[13ch]">
-          Woodstock's trusted exterior remodeling &amp; home renovation experts
-        </h1>
-        <p class="rise d2 mt-6 text-lg sm:text-xl text-white/85 max-w-[38rem] leading-relaxed">
-          A husband-and-wife team with 10+ years of siding, paint, decks, porches and roofing behind us. Licensed and insured, with upfront pricing and no surprises.
-        </p>
-        <div class="rise d3 mt-9 flex flex-col min-[480px]:flex-row gap-3">
-          <a href="#quote" class="inline-flex items-center justify-center rounded-full bg-amber text-ink font-semibold text-[1.05rem] h-14 px-8 hover:bg-[#E0A54C] transition-colors shadow-[0_10px_30px_-10px_rgba(210,149,58,.7)]">Get a free quote</a>
-          <a href="tel:+14049967297" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/40 text-white font-semibold text-[1.05rem] h-14 px-7 hover:bg-white hover:text-ink hover:border-white transition-colors">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-            Call (404) 996-7297
-          </a>
+      <div class="flex-1 flex items-end md:items-center">
+        <div class="max-w-site w-full mx-auto px-4 sm:px-6 pt-32 pb-12 md:py-40">
+          <h1 id="hero-title" class="rise d1 display text-[2.35rem] min-[400px]:text-[2.6rem] sm:text-[3.6rem] lg:text-[4.5rem] max-w-[15ch]">
+            Exterior craftsmanship, built to a higher standard
+          </h1>
+          <p class="rise d2 mt-7 text-[1.08rem] sm:text-xl text-white/85 max-w-[36rem] leading-relaxed">
+            Siding, paint, outdoor living and roofing for distinguished homes in Woodstock and across metro Atlanta. A husband-and-wife team with 10+ years of work behind us.
+          </p>
+          <div class="rise d3 mt-10 flex flex-col min-[480px]:flex-row gap-3">
+            <a href="#quote" class="press inline-flex items-center justify-center rounded-[3px] bg-white text-ink font-medium text-[1rem] h-14 px-8 hover:bg-primer">Get a free quote</a>
+            <a href="tel:+14049967297" class="press inline-flex items-center justify-center gap-2.5 rounded-[3px] border border-white/45 text-white font-medium text-[1rem] h-14 px-7 hover:bg-white/10 hover:border-white">
+              Call (404) 996-7297
+            </a>
+          </div>
         </div>
+      </div>
+
+      <!-- Credentials -->
+      <div class="border-t border-white/15 bg-ink/40 backdrop-blur-[2px]">
+        <ul class="max-w-site mx-auto px-4 sm:px-6 grid grid-cols-2 lg:grid-cols-4 text-[0.9rem] sm:text-[0.95rem] text-white/85" aria-label="Credentials">
+          <li class="py-5 pr-4 lg:border-r border-white/15">Licensed &amp; insured</li>
+          <li class="py-5 pl-4 lg:pl-8 lg:pr-4 border-l lg:border-l-0 lg:border-r border-white/15">10+ years in business</li>
+          <li class="py-5 pr-4 lg:pl-8 border-t lg:border-t-0 lg:border-r border-white/15">Referred by neighbors on Nextdoor</li>
+          <li class="py-5 pl-4 lg:pl-8 border-l lg:border-l-0 border-t lg:border-t-0 border-white/15">James Hardie &amp; GAF materials</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Trust bar (lap-siding texture) -->
-    <section class="lap text-white" aria-label="Credentials">
-      <ul class="max-w-site mx-auto px-4 sm:px-6 py-7 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
-        <li class="flex items-center gap-3">
-          <span class="grid place-items-center w-11 h-11 rounded-full bg-white/10 shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
-          <span class="semi font-semibold leading-tight">Licensed &amp; insured</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="grid place-items-center w-11 h-11 rounded-full bg-white/10 shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <span class="semi font-semibold leading-tight">10+ years in business</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="grid place-items-center w-11 h-11 rounded-full bg-white/10 shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="#D2953A" aria-hidden="true"><path d="M12 2 9.2 8.6 2 9.2l5.5 4.7L5.8 21 12 17.3 18.2 21l-1.7-7.1L22 9.2l-7.2-.6z"/></svg></span>
-          <span class="semi font-semibold leading-tight">5-star reviews</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="grid place-items-center w-11 h-11 rounded-full bg-white/10 shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><path d="M3 10 12 3l9 7"/><path d="M5 10v10h14V10"/><path d="M8 14h8M8 17h8"/></svg></span>
-          <span class="semi font-semibold leading-tight">James Hardie &amp; GAF materials</span>
-        </li>
-      </ul>
-    </section>
-
     <!-- ============ SERVICES ============ -->
-    <section id="services" class="py-20 sm:py-28" aria-labelledby="services-title">
+    <section id="services" class="py-24 sm:py-32 lg:py-40" aria-labelledby="services-title">
       <div class="max-w-site mx-auto px-4 sm:px-6">
         <div class="reveal grid lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-16 items-end mb-14">
-          <h2 id="services-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[14ch]">The outside of your home, done right</h2>
-          <p class="text-lg text-slatey leading-relaxed max-w-[36rem]">We build with materials we'd put on our own house, and we stay on site until the work meets our standard. Here's what we do most.</p>
+          <h2 id="services-title" class="display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem] max-w-[14ch]">The outside of your home, done right</h2>
+          <p class="text-lg text-slatey leading-relaxed max-w-[34rem]">We build with materials we'd put on our own house, and we stay on site until the work meets our standard. Here's what we do most.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0">
           <!-- Siding -->
-          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.00s">
+          <article class="reveal group py-9 border-t border-ink/15" style="--d:0.00s">
             <div class="flex items-center gap-3 mb-4">
-              <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18M3 10h18M3 14h18M3 18h18"/><path d="M3 4v16h18V4"/></svg></span>
+              <span class="grid place-items-center w-10 h-10 -ml-1.5 text-brass-deep"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18M3 10h18M3 14h18M3 18h18"/><path d="M3 4v16h18V4"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Siding</h3>
             </div>
             <p class="text-slatey leading-relaxed">James Hardie® and HardiPlank® fiber cement in a wide range of colors and textures. Built to hold up in diverse climates and backed by a 30-year manufacturer warranty.</p>
-            <p class="mt-4 text-sm font-semibold text-sage-deep">James Hardie® · HardiPlank®</p>
-            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Siding">Get a siding quote</a>
+            <p class="mt-4 text-sm text-slatey">James Hardie® · HardiPlank®</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-medium text-ink underline decoration-brass decoration-1 underline-offset-[6px] hover:text-brass-deep" data-pick-service="Siding">Get a siding quote</a>
           </article>
           <!-- Painting -->
-          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.08s">
+          <article class="reveal group py-9 border-t border-ink/15" style="--d:0.08s">
             <div class="flex items-center gap-3 mb-4">
-              <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="15" height="6" rx="1.5"/><path d="M18 6h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-8v3"/><rect x="10" y="14" width="4" height="7" rx="1"/></svg></span>
+              <span class="grid place-items-center w-10 h-10 -ml-1.5 text-brass-deep"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="15" height="6" rx="1.5"/><path d="M18 6h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-8v3"/><rect x="10" y="14" width="4" height="7" rx="1"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Exterior painting</h3>
             </div>
             <p class="text-slatey leading-relaxed">Premium Sherwin-Williams® paint sealed with MAXFLEX, a top-of-the-line caulk, for a finish that lasts and curb appeal you notice from the street.</p>
-            <p class="mt-4 text-sm font-semibold text-sage-deep">Sherwin-Williams® · MAXFLEX caulking</p>
-            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Exterior painting">Get a painting quote</a>
+            <p class="mt-4 text-sm text-slatey">Sherwin-Williams® · MAXFLEX caulking</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-medium text-ink underline decoration-brass decoration-1 underline-offset-[6px] hover:text-brass-deep" data-pick-service="Exterior painting">Get a painting quote</a>
           </article>
           <!-- Decks -->
-          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.16s">
+          <article class="reveal group py-9 border-t border-ink/15" style="--d:0.16s">
             <div class="flex items-center gap-3 mb-4">
-              <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 10h20M4 6h16M5 10v11M19 10v11M12 10v11M2 15h20"/></svg></span>
+              <span class="grid place-items-center w-10 h-10 -ml-1.5 text-brass-deep"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 10h20M4 6h16M5 10v11M19 10v11M12 10v11M2 15h20"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Decks, pergolas &amp; enclosed porches</h3>
             </div>
             <p class="text-slatey leading-relaxed">Custom-built outdoor living spaces, from deck rebuilds and pergolas to screened and fully enclosed porches, held to the highest quality standards.</p>
-            <p class="mt-4 text-sm font-semibold text-sage-deep">Custom design &amp; build</p>
-            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Decks, pergolas &amp; enclosed porches">Get a deck or porch quote</a>
+            <p class="mt-4 text-sm text-slatey">Custom design &amp; build</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-medium text-ink underline decoration-brass decoration-1 underline-offset-[6px] hover:text-brass-deep" data-pick-service="Decks, pergolas &amp; enclosed porches">Get a deck or porch quote</a>
           </article>
           <!-- Roofing -->
-          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.00s">
+          <article class="reveal group py-9 border-t border-ink/15" style="--d:0.00s">
             <div class="flex items-center gap-3 mb-4">
-              <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12 12 4l10 8"/><path d="M5 10v4M19 10v8a2 2 0 0 1-2 2"/><path d="M19 14h2v6"/></svg></span>
+              <span class="grid place-items-center w-10 h-10 -ml-1.5 text-brass-deep"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12 12 4l10 8"/><path d="M5 10v4M19 10v8a2 2 0 0 1-2 2"/><path d="M19 14h2v6"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Roofing &amp; gutters</h3>
             </div>
             <p class="text-slatey leading-relaxed">GAF HDZ shingles from America's largest roofing manufacturer, plus gutters, downspouts and LeafTek leaf covers that keep water moving away from your home.</p>
-            <p class="mt-4 text-sm font-semibold text-sage-deep">GAF HDZ · LeafTek</p>
-            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Roofing &amp; gutters">Get a roofing quote</a>
+            <p class="mt-4 text-sm text-slatey">GAF HDZ · LeafTek</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-medium text-ink underline decoration-brass decoration-1 underline-offset-[6px] hover:text-brass-deep" data-pick-service="Roofing &amp; gutters">Get a roofing quote</a>
           </article>
           <!-- Kitchen & bath -->
-          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.08s">
+          <article class="reveal group py-9 border-t border-ink/15" style="--d:0.08s">
             <div class="flex items-center gap-3 mb-4">
-              <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M6 12V5a2 2 0 0 1 3.5-1.3"/><path d="M7 20l-1 2M17 20l1 2"/></svg></span>
+              <span class="grid place-items-center w-10 h-10 -ml-1.5 text-brass-deep"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M6 12V5a2 2 0 0 1 3.5-1.3"/><path d="M7 20l-1 2M17 20l1 2"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Kitchen &amp; bath remodeling</h3>
             </div>
             <p class="text-slatey leading-relaxed">Cabinets, counters and full remodels inside the home, with the same care, clean job sites and clear communication we bring to every exterior.</p>
-            <p class="mt-4 text-sm font-semibold text-sage-deep">Interior renovation</p>
-            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Kitchen &amp; bath remodeling">Get a remodeling quote</a>
+            <p class="mt-4 text-sm text-slatey">Interior renovation</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-medium text-ink underline decoration-brass decoration-1 underline-offset-[6px] hover:text-brass-deep" data-pick-service="Kitchen &amp; bath remodeling">Get a remodeling quote</a>
           </article>
           <!-- Landscape -->
-          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.16s">
+          <article class="reveal group py-9 border-t border-ink/15" style="--d:0.16s">
             <div class="flex items-center gap-3 mb-4">
-              <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22V12"/><path d="M12 12c-4 0-7-3-7-7 4 0 7 3 7 7zM12 14c3 0 6-2.5 6-6-3 0-6 2.5-6 6z"/><path d="M4 22h16"/></svg></span>
+              <span class="grid place-items-center w-10 h-10 -ml-1.5 text-brass-deep"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22V12"/><path d="M12 12c-4 0-7-3-7-7 4 0 7 3 7 7zM12 14c3 0 6-2.5 6-6-3 0-6 2.5-6 6z"/><path d="M4 22h16"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Landscape &amp; outdoor design</h3>
             </div>
             <p class="text-slatey leading-relaxed">Outdoor spaces planned to work with your new deck, porch or exterior, so the whole property comes together as one finished look.</p>
-            <p class="mt-4 text-sm font-semibold text-sage-deep">Outdoor living</p>
-            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Landscape &amp; outdoor design">Get an outdoor design quote</a>
+            <p class="mt-4 text-sm text-slatey">Outdoor living</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-medium text-ink underline decoration-brass decoration-1 underline-offset-[6px] hover:text-brass-deep" data-pick-service="Landscape &amp; outdoor design">Get an outdoor design quote</a>
           </article>
         </div>
 
         <!-- Areas of expertise (from Erick's Iron Forums profile) -->
-        <div class="mt-14 rounded-2xl bg-primer p-6 sm:p-9">
-          <h3 class="semi text-xl font-bold mb-1">Erick can also help with</h3>
-          <p class="text-slatey mb-5">Not sure where your project fits? Ask about any of these.</p>
+        <div class="mt-16 border-t border-ink/15 pt-10 grid lg:grid-cols-[1fr_2fr] gap-6 lg:gap-16">
+          <div><h3 class="semi text-xl font-medium mb-1.5">Erick can also help with</h3>
+          <p class="text-slatey">Not sure where your project fits? Ask about any of these.</p></div>
           <ul class="flex flex-wrap gap-2.5" aria-label="Areas of expertise">
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Contracting</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Exterior Remodeling</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Roofs</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Decks</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Project Management</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Real Estate</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Screen Enclosures</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">screened porches</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Investments</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Exterior and Interior Painting</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Gutters and Down Spouts</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Renovation &amp; Investment Potential</li>
-            <li class="rounded-full bg-white border border-ink/10 px-4 py-2 text-[0.95rem] font-medium">Siding Expert</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Contracting</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Exterior Remodeling</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Roofs</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Decks</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Project Management</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Real Estate</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Screen Enclosures</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">screened porches</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Investments</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Exterior and Interior Painting</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Gutters and Down Spouts</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Renovation &amp; Investment Potential</li>
+            <li class="rounded-[3px] border border-ink/15 px-3.5 py-2 text-[0.92rem] text-ink/85">Siding Expert</li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- ============ COLOR VISUALIZER ============ -->
-    <section id="colors" class="py-20 sm:py-28 bg-primer" aria-labelledby="colors-title">
+    <section id="colors" class="py-24 sm:py-32 lg:py-40 bg-primer" aria-labelledby="colors-title">
       <div class="max-w-site mx-auto px-4 sm:px-6">
         <div class="reveal max-w-[40rem] mb-10 lg:mb-14">
-          <h2 id="colors-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem]">Try your colors first</h2>
+          <h2 id="colors-title" class="display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem]">Try your colors first</h2>
           <p class="mt-5 text-lg text-slatey leading-relaxed">Tap a color to try it on the house. When you like what you see, send it with your quote request and we'll bring real samples to your estimate.</p>
         </div>
 
         <div class="grid lg:grid-cols-[1.3fr_1fr] gap-6 lg:gap-14 items-start">
-          <figure class="sticky top-[67px] lg:top-28 z-10 rounded-2xl bg-white p-2 sm:p-6 shadow-[0_18px_40px_-28px_rgba(24,35,45,.55)]">
+          <figure class="sticky top-[67px] lg:top-28 z-10 rounded-md bg-white p-2 sm:p-6 shadow-[0_18px_40px_-28px_rgba(24,35,45,.55)]">
             <svg viewBox="0 0 640 440" class="w-full h-auto max-h-[30svh] sm:max-h-none block" role="img" aria-labelledby="house-caption" data-house
                  style="--siding:#8E9B83;--trim:#F7F6F1;--door:#1D2125;--roof:#3B3D40">
               <defs>
@@ -373,7 +359,7 @@
               <div class="flex flex-wrap gap-2.5" data-swatches="roof"></div>
             </fieldset>
             <div class="pt-2">
-              <button type="button" class="inline-flex items-center justify-center rounded-full bg-ink text-white font-semibold text-[1.05rem] h-14 px-8 hover:bg-ink-3 transition-colors w-full sm:w-auto" data-colors-to-quote>Add these colors to my quote</button>
+              <button type="button" class="inline-flex items-center justify-center press rounded-[3px] bg-ink text-white font-semibold text-[1.05rem] h-14 px-8 hover:bg-ink-3 transition-colors w-full sm:w-auto" data-colors-to-quote>Add these colors to my quote</button>
               <p class="mt-3 text-sm text-slatey">Colors on screen are approximate. Final colors are chosen from physical samples.</p>
             </div>
           </div>
@@ -387,33 +373,33 @@
         <div class="relative min-h-[320px] sm:min-h-[440px] lg:min-h-full">
           <!-- Photo set in content/photos.js (why) -->
           <!-- BUILD:why -->
-      <img src="/images/porch-craftsman.jpg" alt="Craftsman-style home with a covered front porch and tapered columns" class="absolute inset-0 w-full h-full object-cover" decoding="async">
+      <img src="/images/outdoor-room.jpg" alt="Covered outdoor living room with a wood ceiling, fireplace and lounge seating" class="absolute inset-0 w-full h-full object-cover" decoding="async">
           <span class="ph">Placeholder photo</span>
       <!-- /BUILD:why -->
         </div>
         <div class="px-4 sm:px-10 lg:px-16 py-16 sm:py-24 max-w-[44rem]">
-          <h2 id="why-title" class="reveal display font-extrabold text-[2.5rem] sm:text-[3.4rem]">What makes us different</h2>
+          <h2 id="why-title" class="reveal display text-[2.1rem] sm:text-[2.75rem]">What makes us different</h2>
           <p class="mt-5 text-lg text-white/75 leading-relaxed">You'll know the price before we start, and you'll know who's responsible for the work every day until it's done.</p>
           <ul class="mt-10 space-y-7">
             <li class="flex gap-4">
-              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><path d="M20 12V7l-8-4-8 4v5"/><path d="M4 12v5l8 4 8-4v-5"/><path d="M12 8v8M9.5 10.5c0-1 1-1.5 2.5-1.5s2.5.6 2.5 1.6c0 2.2-5 1.2-5 3.4 0 1 1 1.6 2.5 1.6s2.5-.5 2.5-1.5"/></svg>
-              <div><h3 class="semi font-bold text-xl">Fair, cost-effective pricing</h3><p class="text-white/70 mt-1 leading-relaxed">Quality materials and honest labor at a price that respects your budget.</p></div>
+              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C2A073" stroke-width="2" aria-hidden="true"><path d="M20 12V7l-8-4-8 4v5"/><path d="M4 12v5l8 4 8-4v-5"/><path d="M12 8v8M9.5 10.5c0-1 1-1.5 2.5-1.5s2.5.6 2.5 1.6c0 2.2-5 1.2-5 3.4 0 1 1 1.6 2.5 1.6s2.5-.5 2.5-1.5"/></svg>
+              <div><h3 class="semi font-medium text-xl">Fair, cost-effective pricing</h3><p class="text-white/70 mt-1 leading-relaxed">Quality materials and honest labor at a price that respects your budget.</p></div>
             </li>
             <li class="flex gap-4">
-              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
-              <div><h3 class="semi font-bold text-xl">Upfront pricing, no surprises</h3><p class="text-white/70 mt-1 leading-relaxed">A clear written quote before work begins. If something changes, we talk it through with you first.</p></div>
+              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C2A073" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+              <div><h3 class="semi font-medium text-xl">Upfront pricing, no surprises</h3><p class="text-white/70 mt-1 leading-relaxed">A clear written quote before work begins. If something changes, we talk it through with you first.</p></div>
             </li>
             <li class="flex gap-4">
-              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              <div><h3 class="semi font-bold text-xl">Fully licensed &amp; insured</h3><p class="text-white/70 mt-1 leading-relaxed">Your home and your investment are protected from the first day to the last.</p></div>
+              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C2A073" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div><h3 class="semi font-medium text-xl">Fully licensed &amp; insured</h3><p class="text-white/70 mt-1 leading-relaxed">Your home and your investment are protected from the first day to the last.</p></div>
             </li>
             <li class="flex gap-4">
-              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><circle cx="9" cy="7" r="3.5"/><path d="M2.5 21v-1a6.5 6.5 0 0 1 13 0v1"/><path d="M16 4a3.5 3.5 0 0 1 0 7M21.5 21v-1a6.5 6.5 0 0 0-4-6"/></svg>
-              <div><h3 class="semi font-bold text-xl">Experienced, trained, insured crews</h3><p class="text-white/70 mt-1 leading-relaxed">Skilled installers who know these materials and treat your property with respect.</p></div>
+              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C2A073" stroke-width="2" aria-hidden="true"><circle cx="9" cy="7" r="3.5"/><path d="M2.5 21v-1a6.5 6.5 0 0 1 13 0v1"/><path d="M16 4a3.5 3.5 0 0 1 0 7M21.5 21v-1a6.5 6.5 0 0 0-4-6"/></svg>
+              <div><h3 class="semi font-medium text-xl">Experienced, trained, insured crews</h3><p class="text-white/70 mt-1 leading-relaxed">Skilled installers who know these materials and treat your property with respect.</p></div>
             </li>
             <li class="flex gap-4">
-              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D2953A" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              <div><h3 class="semi font-bold text-xl">On-site project managers</h3><p class="text-white/70 mt-1 leading-relaxed">Someone on your job checking quality standards and making sure warranty requirements are met.</p></div>
+              <svg class="shrink-0 mt-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C2A073" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <div><h3 class="semi font-medium text-xl">On-site project managers</h3><p class="text-white/70 mt-1 leading-relaxed">Someone on your job checking quality standards and making sure warranty requirements are met.</p></div>
             </li>
           </ul>
         </div>
@@ -421,81 +407,81 @@
     </section>
 
     <!-- ============ GALLERY ============ -->
-    <section id="work" class="py-20 sm:py-28 bg-primer" aria-labelledby="work-title">
+    <section id="work" class="py-24 sm:py-32 lg:py-40 bg-primer" aria-labelledby="work-title">
       <div class="max-w-site mx-auto px-4 sm:px-6">
         <!-- Gallery + before/after are generated from content/photos.js -->
         <!-- BUILD:work -->
       <div class="reveal flex flex-col lg:flex-row lg:items-end gap-6 justify-between mb-10">
           <div>
-            <h2 id="work-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem]">Our work</h2>
+            <h2 id="work-title" class="display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem]">Our work</h2>
             <p class="mt-4 text-lg text-slatey max-w-[36rem] leading-relaxed">Tap any photo to see it full size.</p>
           </div>
           <p class="text-sm text-slatey max-w-[24rem] lg:text-right">Photos shown are placeholders until real SHS project photos are added.</p>
         </div>
         <!-- Before/after sliders appear here when pairs are added in content/photos.js -->
-        <div style="overflow-x:auto" class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 mb-6 [scrollbar-width:none]" role="group" aria-label="Filter projects">
-          <button type="button" class="shrink-0 h-11 px-5 rounded-full font-semibold text-[0.95rem] border-2 border-ink bg-ink text-white" aria-pressed="true" data-filter="all">All</button>
-          <button type="button" class="shrink-0 h-11 px-5 rounded-full font-semibold text-[0.95rem] border-2 border-ink/20 bg-white hover:border-ink" aria-pressed="false" data-filter="siding">Siding</button>
-          <button type="button" class="shrink-0 h-11 px-5 rounded-full font-semibold text-[0.95rem] border-2 border-ink/20 bg-white hover:border-ink" aria-pressed="false" data-filter="decks">Decks</button>
-          <button type="button" class="shrink-0 h-11 px-5 rounded-full font-semibold text-[0.95rem] border-2 border-ink/20 bg-white hover:border-ink" aria-pressed="false" data-filter="porch">Porch enclosures</button>
-          <button type="button" class="shrink-0 h-11 px-5 rounded-full font-semibold text-[0.95rem] border-2 border-ink/20 bg-white hover:border-ink" aria-pressed="false" data-filter="roofing">Roofing</button>
-          <button type="button" class="shrink-0 h-11 px-5 rounded-full font-semibold text-[0.95rem] border-2 border-ink/20 bg-white hover:border-ink" aria-pressed="false" data-filter="paint">Paint</button>
+        <div style="overflow-x:auto" class="flex overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 mb-8 border-b border-ink/10 [scrollbar-width:none]" role="group" aria-label="Filter projects">
+          <button type="button" class="shrink-0 h-11 mr-6 font-medium text-[0.95rem] border-b-2 border-ink text-ink" aria-pressed="true" data-filter="all">All</button>
+          <button type="button" class="shrink-0 h-11 mr-6 font-medium text-[0.95rem] border-b-2 border-transparent text-slatey hover:text-ink" aria-pressed="false" data-filter="siding">Siding</button>
+          <button type="button" class="shrink-0 h-11 mr-6 font-medium text-[0.95rem] border-b-2 border-transparent text-slatey hover:text-ink" aria-pressed="false" data-filter="decks">Decks</button>
+          <button type="button" class="shrink-0 h-11 mr-6 font-medium text-[0.95rem] border-b-2 border-transparent text-slatey hover:text-ink" aria-pressed="false" data-filter="porch">Porch enclosures</button>
+          <button type="button" class="shrink-0 h-11 mr-6 font-medium text-[0.95rem] border-b-2 border-transparent text-slatey hover:text-ink" aria-pressed="false" data-filter="roofing">Roofing</button>
+          <button type="button" class="shrink-0 h-11 mr-6 font-medium text-[0.95rem] border-b-2 border-transparent text-slatey hover:text-ink" aria-pressed="false" data-filter="paint">Paint</button>
         </div>
         <ul class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row-dense gap-3 sm:gap-4" data-gallery>
           <li class="gal-item col-span-2 row-span-2" data-cat="siding">
-            <button type="button" class="group relative block w-full h-full min-h-[260px] overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Craftsman home with sage fiber-cement siding, stone base and white trim">
-              <img src="/images/siding-craftsman-sage.jpg" alt="Craftsman home with sage fiber-cement siding, stone base and white trim" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full h-full min-h-[260px] overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Modern home with dark and wood-tone cladding and large lit windows at dusk">
+              <img src="/images/modern-cladding-dusk.jpg" alt="Modern home with dark and wood-tone cladding and large lit windows at dusk" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Siding</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Siding</span>
             </button>
           </li>
           <li class="gal-item" data-cat="decks">
-            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Wood home with a wide elevated deck overlooking the yard">
-              <img src="/images/deck-outdoor-living.jpg" alt="Wood home with a wide elevated deck overlooking the yard" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Covered outdoor room with a wood ceiling, fireplace and lounge seating">
+              <img src="/images/outdoor-room.jpg" alt="Covered outdoor room with a wood ceiling, fireplace and lounge seating" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Decks</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Outdoor living</span>
             </button>
           </li>
           <li class="gal-item" data-cat="porch">
-            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Bungalow with a covered front porch and white railings">
-              <img src="/images/porch-bungalow.jpg" alt="Bungalow with a covered front porch and white railings" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Enclosed sunroom with floor-to-ceiling windows and warm wood furniture">
+              <img src="/images/sunroom-enclosure.jpg" alt="Enclosed sunroom with floor-to-ceiling windows and warm wood furniture" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Porch enclosures</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Porch enclosures</span>
             </button>
           </li>
           <li class="gal-item" data-cat="roofing">
-            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Roofer working on a shingle roof replacement">
-              <img src="/images/roofing-crew.jpg" alt="Roofer working on a shingle roof replacement" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Brick and stone estate home with steep architectural shingle rooflines">
+              <img src="/images/estate-roofline.jpg" alt="Brick and stone estate home with steep architectural shingle rooflines" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Roofing</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Roofing</span>
             </button>
           </li>
           <li class="gal-item" data-cat="paint">
-            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Freshly painted white farmhouse with lap siding and wraparound porch">
-              <img src="/images/hero-farmhouse-siding.jpg" alt="Freshly painted white farmhouse with lap siding and wraparound porch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Black-painted modern home with warm lit windows at dusk">
+              <img src="/images/painted-modern-dusk.jpg" alt="Black-painted modern home with warm lit windows at dusk" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Paint</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Paint</span>
             </button>
           </li>
           <li class="gal-item" data-cat="porch">
-            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Craftsman front porch with tapered columns">
-              <img src="/images/porch-craftsman.jpg" alt="Craftsman front porch with tapered columns" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Gray craftsman home with a white-railed covered front porch">
+              <img src="/images/craftsman-porch.jpg" alt="Gray craftsman home with a white-railed covered front porch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Porch enclosures</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Porch enclosures</span>
             </button>
           </li>
           <li class="gal-item col-span-2" data-cat="roofing">
-            <button type="button" class="group relative block w-full h-full aspect-[2/1] lg:aspect-auto overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Two-story brick home with a new architectural shingle roof">
-              <img src="/images/roofing-traditional-home.jpg" alt="Two-story brick home with a new architectural shingle roof" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+            <button type="button" class="group relative block w-full h-full aspect-[2/1] lg:aspect-auto overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Wood-sided craftsman home with steep gables and glowing windows at dusk">
+              <img src="/images/craftsman-dusk.jpg" alt="Wood-sided craftsman home with steep gables and glowing windows at dusk" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Roofing</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Roofing</span>
             </button>
           </li>
-          <li class="gal-item" data-cat="paint">
-            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-2xl bg-ink-2" data-lightbox aria-label="View larger: Modern home exterior with crisp white paint and wood accent panels">
-              <img src="/images/paint-modern-exterior.jpg" alt="Modern home exterior with crisp white paint and wood accent panels" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" decoding="async">
+          <li class="gal-item" data-cat="siding">
+            <button type="button" class="group relative block w-full aspect-square overflow-hidden rounded-md bg-ink-2" data-lightbox aria-label="View larger: Contemporary facade with vertical wood siding and dark panels">
+              <img src="/images/wood-dark-facade.jpg" alt="Contemporary facade with vertical wood siding and dark panels" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" loading="lazy" decoding="async">
               <span class="ph">Placeholder</span>
-              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-semibold semi">Paint</span>
+              <span class="absolute inset-x-0 bottom-0 p-4 text-left bg-gradient-to-t from-ink/85 to-transparent text-white font-medium">Siding</span>
             </button>
           </li>
         </ul>
@@ -504,25 +490,57 @@
       </div>
     </section>
 
+    <!-- ============ PROCESS ============ -->
+    <section id="process" class="py-24 sm:py-32 lg:py-40" aria-labelledby="process-title">
+      <div class="max-w-site mx-auto px-4 sm:px-6">
+        <div class="reveal grid lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-16 items-end mb-14 lg:mb-20">
+          <h2 id="process-title" class="display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem] max-w-[14ch]">How a project runs</h2>
+          <p class="text-lg text-slatey leading-relaxed max-w-[34rem]">Four steps, the same on every job. You always know what's happening and who's responsible for it.</p>
+        </div>
+        <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10">
+          <li class="reveal border-t border-ink/15 pt-6 pb-10" style="--d:0s">
+            <span class="display text-brass-deep text-[1.1rem]" aria-hidden="true">01</span>
+            <h3 class="semi text-[1.3rem] font-medium mt-3">Visit</h3>
+            <p class="mt-2 text-slatey leading-relaxed">Erick comes out to see your home in person, listens to what you have in mind and looks closely at what's there today.</p>
+          </li>
+          <li class="reveal border-t border-ink/15 pt-6 pb-10" style="--d:.08s">
+            <span class="display text-brass-deep text-[1.1rem]" aria-hidden="true">02</span>
+            <h3 class="semi text-[1.3rem] font-medium mt-3">Written quote</h3>
+            <p class="mt-2 text-slatey leading-relaxed">A clear, upfront price in writing before any work begins. If something changes along the way, we talk it through with you first.</p>
+          </li>
+          <li class="reveal border-t border-ink/15 pt-6 pb-10" style="--d:.16s">
+            <span class="display text-brass-deep text-[1.1rem]" aria-hidden="true">03</span>
+            <h3 class="semi text-[1.3rem] font-medium mt-3">Build</h3>
+            <p class="mt-2 text-slatey leading-relaxed">Trained, insured crews with an on-site project manager checking quality every day, and a clean job site at the end of each one.</p>
+          </li>
+          <li class="reveal border-t border-ink/15 pt-6 pb-10" style="--d:.24s">
+            <span class="display text-brass-deep text-[1.1rem]" aria-hidden="true">04</span>
+            <h3 class="semi text-[1.3rem] font-medium mt-3">Walkthrough</h3>
+            <p class="mt-2 text-slatey leading-relaxed">We walk the finished work with you and make sure warranty requirements are met. We're not done until you're happy.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- ============ ABOUT ============ -->
-    <section id="about" class="py-20 sm:py-28" aria-labelledby="about-title">
+    <section id="about" class="py-24 sm:py-32 lg:py-40" aria-labelledby="about-title">
       <div class="max-w-site mx-auto px-4 sm:px-6 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-start">
         <div class="relative lg:sticky lg:top-28">
           <!-- Photo set in content/photos.js (about) -->
-          <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-ink">
+          <div class="relative aspect-[4/5] rounded-md overflow-hidden bg-ink">
             <!-- BUILD:about -->
-      <img src="/images/porch-bungalow.jpg" alt="Placeholder for a photo of Erick Von Borries and his wife" class="absolute inset-0 w-full h-full object-cover" decoding="async">
+      <img src="/images/craftsman-dusk.jpg" alt="Placeholder for a photo of Erick Von Borries and his wife" class="absolute inset-0 w-full h-full object-cover" decoding="async">
             <span class="ph">Placeholder: photo of Erick &amp; family</span>
       <!-- /BUILD:about -->
           </div>
-          <div class="lap text-white rounded-2xl p-6 -mt-16 mx-4 sm:mx-8 relative shadow-[0_24px_50px_-20px_rgba(24,35,45,.6)]">
-            <p class="display font-extrabold text-[3rem] text-amber leading-none">10+</p>
+          <div class="lap text-white rounded-md p-6 -mt-16 mx-4 sm:mx-8 relative shadow-[0_24px_50px_-20px_rgba(24,35,45,.6)]">
+            <p class="display text-[3rem] text-brass-light leading-none">10+</p>
             <p class="mt-2 font-medium text-white/85">years of remodeling homes in Woodstock and across metro Atlanta</p>
           </div>
         </div>
 
         <div>
-          <h2 id="about-title" class="reveal display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[14ch]">A family business, built on referrals</h2>
+          <h2 id="about-title" class="reveal display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem] max-w-[14ch]">A family business, built on referrals</h2>
           <div class="mt-8 space-y-5 text-lg leading-[1.7] text-ink/85 max-w-[38rem]">
             <p>SHS &amp; Improvements is Erick Von Borries and his wife, a husband-and-wife team who have been remodeling homes for more than ten years. We're a small company on purpose. It means one of us is involved in every job, and the people you meet at the estimate are the people who answer for the finished work.</p>
             <p>We treat your home like it's our own: protecting your landscaping, cleaning up at the end of every day, and paying attention to the details most people never see, like flashing behind siding, solid footings under a deck and a clean caulk line.</p>
@@ -530,20 +548,20 @@
           </div>
 
           <ul class="mt-10 grid grid-cols-2 gap-3 max-w-[38rem]">
-            <li class="rounded-xl border-2 border-ink/10 p-4"><p class="semi font-bold text-lg">Integrity</p><p class="text-sm text-slatey mt-1">Doing what we said we'd do.</p></li>
-            <li class="rounded-xl border-2 border-ink/10 p-4"><p class="semi font-bold text-lg">Honesty</p><p class="text-sm text-slatey mt-1">Straight answers, even about hidden problems.</p></li>
-            <li class="rounded-xl border-2 border-ink/10 p-4"><p class="semi font-bold text-lg">Trust</p><p class="text-sm text-slatey mt-1">Earned on your job, kept with your neighbors.</p></li>
-            <li class="rounded-xl border-2 border-ink/10 p-4"><p class="semi font-bold text-lg">100% satisfaction</p><p class="text-sm text-slatey mt-1">We're not done until you're happy.</p></li>
+            <li class="border-t border-ink/15 pt-4"><p class="semi font-medium text-[1.05rem]">Integrity</p><p class="text-sm text-slatey mt-1">Doing what we said we'd do.</p></li>
+            <li class="border-t border-ink/15 pt-4"><p class="semi font-medium text-[1.05rem]">Honesty</p><p class="text-sm text-slatey mt-1">Straight answers, even about hidden problems.</p></li>
+            <li class="border-t border-ink/15 pt-4"><p class="semi font-medium text-[1.05rem]">Trust</p><p class="text-sm text-slatey mt-1">Earned on your job, kept with your neighbors.</p></li>
+            <li class="border-t border-ink/15 pt-4"><p class="semi font-medium text-[1.05rem]">100% satisfaction</p><p class="text-sm text-slatey mt-1">We're not done until you're happy.</p></li>
           </ul>
 
-          <figure class="mt-12 border-l-4 border-amber pl-6 max-w-[38rem]">
-            <blockquote class="text-xl leading-relaxed text-ink">
+          <figure class="mt-14 border-l border-brass pl-7 max-w-[38rem]">
+            <blockquote class="serif text-[1.55rem] sm:text-[1.75rem] leading-snug text-ink">
               <p>“I believe business is an opportunity to serve others, lead with integrity, and honor God through the way we work and treat people.”</p>
             </blockquote>
             <figcaption class="mt-3 text-slatey">Erick Von Borries, owner</figcaption>
           </figure>
 
-          <div class="mt-10 flex items-center gap-4 rounded-2xl bg-primer p-5 max-w-[38rem]">
+          <div class="mt-10 flex items-center gap-4 rounded-md bg-primer p-5 max-w-[38rem]">
             <svg width="44" height="50" viewBox="0 0 44 50" aria-hidden="true" class="shrink-0"><path d="M22 2 4 8v14c0 13 8 21 18 26 10-5 18-13 18-26V8z" fill="#18232D"/><path d="M22 6 8 11v11c0 10.5 6 17 14 21 8-4 14-10.5 14-21V11z" fill="none" stroke="#fff" stroke-width="1.5"/><text x="22" y="31" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="15" fill="#fff">IF</text></svg>
             <p class="leading-snug"><span class="font-semibold">Proud member of Iron Forums</span><br><span class="text-slatey text-[0.95rem]">A Christian business community. Connect · Sharpen · Grow.</span></p>
           </div>
@@ -553,10 +571,10 @@
 
     <!-- ============ REVIEWS ============ -->
     <!-- Reviews are generated from content/reviews.js -->
-    <section id="reviews" class="py-20 sm:py-28 bg-primer" aria-labelledby="reviews-title">
+    <section id="reviews" class="py-24 sm:py-32 lg:py-40 bg-primer" aria-labelledby="reviews-title">
       <div class="max-w-site mx-auto px-4 sm:px-6">
         <div class="reveal grid lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-16 items-end mb-12">
-          <h2 id="reviews-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[16ch]">Neighbors telling neighbors</h2>
+          <h2 id="reviews-title" class="display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem] max-w-[16ch]">Neighbors telling neighbors</h2>
           <div>
             <p class="inline-flex items-center gap-2 rounded-full bg-sage-soft text-sage-deep font-semibold px-4 py-2">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
@@ -568,44 +586,44 @@
 
         <!-- BUILD:reviews -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          <figure class="lap text-white rounded-2xl p-7 sm:p-9 md:col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col">
-            <p class="display font-extrabold text-[3.3rem] min-[400px]:text-[4rem] sm:text-[6rem] text-amber">“Outstanding.”</p>
-            <blockquote class="mt-4 text-xl sm:text-2xl leading-snug text-white/90 max-w-[34rem]"><p>Our covered patio was a concrete slab under a metal roof. SHS turned it into a solid, beautiful room that matches the house like it was always there.</p></blockquote>
+          <figure class="lap text-white rounded-md p-7 sm:p-9 md:col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col">
+            <p class="serif text-[3.4rem] sm:text-[5rem] leading-none text-brass-light">“Outstanding.”</p>
+            <blockquote class="serif mt-6 text-[1.45rem] sm:text-[1.8rem] leading-snug text-white/90 max-w-[34rem]"><p>Our covered patio was a concrete slab under a metal roof. SHS turned it into a solid, beautiful room that matches the house like it was always there.</p></blockquote>
             <figcaption class="mt-auto pt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm text-white/75">
               
-              <span class="rounded-full bg-white/10 px-3 py-1 font-semibold text-white">Nextdoor</span><span>Covered patio enclosure</span>
+              <span class="rounded-[3px] border border-white/25 px-2.5 py-0.5 font-medium text-white">Nextdoor</span><span>Covered patio enclosure</span>
               <span class="w-full text-xs text-white/60">Summary of a real Nextdoor review</span>
             </figcaption>
           </figure>
-          <figure class="bg-white rounded-2xl p-7 flex flex-col border border-ink/5 ">
-            <blockquote class="leading-relaxed text-ink/90"><p>Honest and trustworthy from start to finish. When they found hidden rot during our deck demolition, they handled it the right way, stayed in budget, worked quickly and kept us updated while we were away.</p></blockquote>
+          <figure class="bg-white rounded-md p-8 flex flex-col ">
+            <blockquote class="serif text-[1.22rem] leading-relaxed text-ink"><p>Honest and trustworthy from start to finish. When they found hidden rot during our deck demolition, they handled it the right way, stayed in budget, worked quickly and kept us updated while we were away.</p></blockquote>
             <figcaption class="mt-auto pt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm text-slatey">
               
-              <span class="rounded-full bg-primer px-3 py-1 font-semibold text-ink">Nextdoor</span><span>Deck demolition &amp; rebuild</span>
+              <span class="rounded-[3px] border border-ink/15 px-2.5 py-0.5 font-medium text-ink">Nextdoor</span><span>Deck demolition &amp; rebuild</span>
               <span class="w-full text-xs text-slatey">Summary of a real Nextdoor review</span>
             </figcaption>
           </figure>
-          <figure class="bg-white rounded-2xl p-7 flex flex-col border border-ink/5 ">
-            <blockquote class="leading-relaxed text-ink/90"><p>New concrete posts, a full new deck structure, a roof and a fireplace. Finished on time and on budget, even with our change orders. A kind, honest crew.</p></blockquote>
+          <figure class="bg-white rounded-md p-8 flex flex-col ">
+            <blockquote class="serif text-[1.22rem] leading-relaxed text-ink"><p>New concrete posts, a full new deck structure, a roof and a fireplace. Finished on time and on budget, even with our change orders. A kind, honest crew.</p></blockquote>
             <figcaption class="mt-auto pt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm text-slatey">
               
-              <span class="rounded-full bg-primer px-3 py-1 font-semibold text-ink">Nextdoor</span><span>Deck, roof &amp; fireplace</span>
+              <span class="rounded-[3px] border border-ink/15 px-2.5 py-0.5 font-medium text-ink">Nextdoor</span><span>Deck, roof &amp; fireplace</span>
               <span class="w-full text-xs text-slatey">Summary of a real Nextdoor review</span>
             </figcaption>
           </figure>
-          <figure class="bg-white rounded-2xl p-7 flex flex-col border border-ink/5 ">
-            <blockquote class="leading-relaxed text-ink/90"><p>Professional, friendly and meticulous. They cleaned up every night and again at the end, and their communication and follow-up were exceptional.</p></blockquote>
+          <figure class="bg-white rounded-md p-8 flex flex-col ">
+            <blockquote class="serif text-[1.22rem] leading-relaxed text-ink"><p>Professional, friendly and meticulous. They cleaned up every night and again at the end, and their communication and follow-up were exceptional.</p></blockquote>
             <figcaption class="mt-auto pt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm text-slatey">
               
-              <span class="rounded-full bg-primer px-3 py-1 font-semibold text-ink">Nextdoor</span><span>Outdoor living project</span>
+              <span class="rounded-[3px] border border-ink/15 px-2.5 py-0.5 font-medium text-ink">Nextdoor</span><span>Outdoor living project</span>
               <span class="w-full text-xs text-slatey">Summary of a real Nextdoor review</span>
             </figcaption>
           </figure>
-          <figure class="bg-white rounded-2xl p-7 flex flex-col border border-ink/5 lg:col-span-2">
-            <blockquote class="leading-relaxed text-ink/90"><p>He came out promptly to look at the job. His quote was competitive but not the cheapest, and we chose SHS for the trust and professionalism. Our laundry room counters and cabinets came out great.</p></blockquote>
+          <figure class="bg-white rounded-md p-8 flex flex-col lg:col-span-2">
+            <blockquote class="serif text-[1.22rem] leading-relaxed text-ink"><p>He came out promptly to look at the job. His quote was competitive but not the cheapest, and we chose SHS for the trust and professionalism. Our laundry room counters and cabinets came out great.</p></blockquote>
             <figcaption class="mt-auto pt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm text-slatey">
               
-              <span class="rounded-full bg-primer px-3 py-1 font-semibold text-ink">Angi</span><span>Laundry room counters &amp; cabinets</span>
+              <span class="rounded-[3px] border border-ink/15 px-2.5 py-0.5 font-medium text-ink">Angi</span><span>Laundry room counters &amp; cabinets</span>
               <span class="w-full text-xs text-slatey">Summary of a real Angi review</span>
             </figcaption>
           </figure>
@@ -616,34 +634,34 @@
     </section>
 
     <!-- ============ CONTACT / QUOTE ============ -->
-    <section id="quote" class="py-20 sm:py-28" aria-labelledby="quote-title">
+    <section id="quote" class="py-24 sm:py-32 lg:py-40" aria-labelledby="quote-title">
       <div class="max-w-site mx-auto px-4 sm:px-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16">
         <div>
-          <h2 id="quote-title" class="reveal display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[13ch]">Get a free quote</h2>
+          <h2 id="quote-title" class="reveal display text-[2.1rem] sm:text-[2.75rem] lg:text-[3.25rem] max-w-[13ch]">Get a free quote</h2>
           <p class="mt-5 text-lg text-slatey max-w-[34rem] leading-relaxed">Tell us a little about your project. Erick will get back to you to set up a time to see it in person.</p>
 
           <form class="mt-10 grid sm:grid-cols-2 gap-x-5 gap-y-5" novalidate data-quote-form>
             <div>
-              <label for="f-name" class="block font-semibold mb-2">Name</label>
+              <label for="f-name" class="block text-[0.95rem] font-medium mb-2">Name</label>
               <input id="f-name" name="name" type="text" autocomplete="name" required class="field" aria-describedby="e-name">
               <p id="e-name" class="text-[#B3261E] text-sm mt-1.5 hidden">Enter your name.</p>
             </div>
             <div>
-              <label for="f-phone" class="block font-semibold mb-2">Phone</label>
+              <label for="f-phone" class="block text-[0.95rem] font-medium mb-2">Phone</label>
               <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required class="field" aria-describedby="e-phone">
               <p id="e-phone" class="text-[#B3261E] text-sm mt-1.5 hidden">Enter a phone number with at least 10 digits.</p>
             </div>
             <div>
-              <label for="f-email" class="block font-semibold mb-2">Email</label>
+              <label for="f-email" class="block text-[0.95rem] font-medium mb-2">Email</label>
               <input id="f-email" name="email" type="email" autocomplete="email" required class="field" aria-describedby="e-email">
               <p id="e-email" class="text-[#B3261E] text-sm mt-1.5 hidden">Enter an email address like name@example.com.</p>
             </div>
             <div>
-              <label for="f-address" class="block font-semibold mb-2">Address or ZIP</label>
+              <label for="f-address" class="block text-[0.95rem] font-medium mb-2">Address or ZIP</label>
               <input id="f-address" name="address" type="text" autocomplete="street-address" class="field" placeholder="e.g. 30188">
             </div>
             <div class="sm:col-span-2">
-              <label for="f-service" class="block font-semibold mb-2">Service needed</label>
+              <label for="f-service" class="block text-[0.95rem] font-medium mb-2">Service needed</label>
               <select id="f-service" name="service" required class="field" aria-describedby="e-service">
                 <option value="" selected disabled>Choose a service</option>
                 <option>Siding</option>
@@ -657,14 +675,14 @@
               <p id="e-service" class="text-[#B3261E] text-sm mt-1.5 hidden">Choose the service you need.</p>
             </div>
             <div class="sm:col-span-2">
-              <label for="f-details" class="block font-semibold mb-2">Project details</label>
+              <label for="f-details" class="block text-[0.95rem] font-medium mb-2">Project details</label>
               <textarea id="f-details" name="details" rows="5" class="field resize-y" placeholder="What would you like done? Any timeline or budget in mind?"></textarea>
             </div>
             <!-- honeypot -->
             <div class="hidden" aria-hidden="true"><label>Leave blank <input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
 
             <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
-              <button type="submit" class="inline-flex items-center justify-center gap-2.5 rounded-full bg-amber text-ink font-semibold text-[1.05rem] h-14 px-9 hover:bg-[#E0A54C] disabled:opacity-70" data-submit>
+              <button type="submit" class="press inline-flex items-center justify-center gap-2.5 rounded-[3px] bg-ink text-white font-medium text-[1rem] h-14 px-9 hover:bg-ink-3 disabled:opacity-70" data-submit>
                 <span class="spinner hidden" aria-hidden="true" data-submit-spinner></span>
                 <span data-submit-label>Send my quote request</span>
               </button>
@@ -672,44 +690,44 @@
             </div>
 
             <!-- Error (stays above the form fields' button; the details remain filled in) -->
-            <div class="sm:col-span-2 hidden rounded-2xl border-2 border-[#B3261E]/40 bg-[#FBEDEC] p-5 sm:p-6" role="alert" tabindex="-1" data-form-error>
-              <p class="semi font-bold text-lg text-[#8C1D18] flex items-center gap-2">
+            <div class="sm:col-span-2 hidden rounded-md border-2 border-[#B3261E]/40 bg-[#FBEDEC] p-5 sm:p-6" role="alert" tabindex="-1" data-form-error>
+              <p class="semi font-medium text-lg text-[#8C1D18] flex items-center gap-2">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></svg>
                 Your request didn't go through
               </p>
               <p class="mt-1.5 text-ink/85" data-error-body>Check your connection and try again, or call us at (404) 996-7297. Your details are still filled in.</p>
               <div class="mt-4 flex flex-wrap gap-2.5">
-                <a href="tel:+14049967297" class="inline-flex items-center justify-center rounded-full bg-ink text-white font-semibold h-12 px-6">Call (404) 996-7297</a>
-                <a href="#" class="hidden items-center justify-center rounded-full border-2 border-ink font-semibold h-12 px-6" data-error-sms>Text my request instead</a>
+                <a href="tel:+14049967297" class="inline-flex items-center justify-center press rounded-[3px] bg-ink text-white font-semibold h-12 px-6">Call (404) 996-7297</a>
+                <a href="#" class="hidden items-center justify-center press rounded-[3px] border-2 border-ink font-semibold h-12 px-6" data-error-sms>Text my request instead</a>
               </div>
             </div>
           </form>
 
           <!-- Success (replaces the form) -->
-          <div class="mt-10 hidden rounded-2xl border-2 border-sage bg-sage-soft p-6 sm:p-8" role="status" tabindex="-1" data-form-success>
-            <p class="semi font-bold text-2xl text-ink flex items-center gap-2.5">
+          <div class="mt-10 hidden rounded-md border-2 border-sage bg-sage-soft p-6 sm:p-8" role="status" tabindex="-1" data-form-success>
+            <p class="semi font-medium text-2xl text-ink flex items-center gap-2.5">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#56634C" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
               Quote request sent
             </p>
             <p class="mt-2 text-lg text-ink/85" data-success-body>Thanks! Erick will be in touch soon to set up a time to see your project.</p>
             <div class="mt-5 flex flex-wrap items-center gap-2.5">
-              <a href="#" class="hidden items-center justify-center rounded-full bg-ink text-white font-semibold h-12 px-6" data-success-sms>Text Erick photos of the project</a>
-              <button type="button" class="inline-flex items-center justify-center rounded-full border-2 border-ink/20 hover:border-ink font-semibold h-12 px-6" data-form-again>Send another request</button>
+              <a href="#" class="hidden items-center justify-center press rounded-[3px] bg-ink text-white font-semibold h-12 px-6" data-success-sms>Text Erick photos of the project</a>
+              <button type="button" class="inline-flex items-center justify-center press rounded-[3px] border-2 border-ink/20 hover:border-ink font-semibold h-12 px-6" data-form-again>Send another request</button>
             </div>
           </div>
         </div>
 
         <div class="lg:pt-4" role="group" aria-label="Contact information">
-          <div class="rounded-2xl bg-ink text-white p-7 sm:p-8">
+          <div class="rounded-md bg-ink text-white p-7 sm:p-8">
             <a href="tel:+14049967297" class="group block">
               <span class="text-white/70 text-sm">Call or text</span>
-              <span class="display block font-extrabold text-[2.4rem] text-amber group-hover:text-white transition-colors">(404) 996-7297</span>
+              <span class="display block text-[2rem] text-brass-light group-hover:text-white transition-colors">(404) 996-7297</span>
             </a>
             <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm font-medium" data-open-status hidden><span class="w-2.5 h-2.5 rounded-full" data-open-dot></span><span data-open-text></span></p>
             <dl class="mt-7 space-y-5 text-[0.98rem]">
               <div>
                 <dt class="text-white/60 text-sm">Address</dt>
-                <dd class="mt-1"><a href="https://www.google.com/maps/search/?api=1&query=1029+Knotts+Pointe+Dr+Woodstock+GA+30188" target="_blank" rel="noopener" class="hover:text-amber underline-offset-4 hover:underline">1029 Knotts Pointe Dr<br>Woodstock, GA 30188</a></dd>
+                <dd class="mt-1"><a href="https://www.google.com/maps/search/?api=1&query=1029+Knotts+Pointe+Dr+Woodstock+GA+30188" target="_blank" rel="noopener" class="hover:text-brass-light underline-offset-4 hover:underline">1029 Knotts Pointe Dr<br>Woodstock, GA 30188</a></dd>
               </div>
               <div>
                 <dt class="text-white/60 text-sm">Hours</dt>
@@ -721,7 +739,7 @@
               </div>
             </dl>
           </div>
-          <div class="mt-4 rounded-2xl overflow-hidden border border-ink/10 aspect-[4/3] bg-primer">
+          <div class="mt-4 rounded-md overflow-hidden border border-ink/10 aspect-[4/3] bg-primer">
             <iframe title="Map showing SHS &amp; Improvements at 1029 Knotts Pointe Dr, Woodstock, GA" src="https://www.google.com/maps?q=1029+Knotts+Pointe+Dr,+Woodstock,+GA+30188&z=13&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
@@ -733,26 +751,26 @@
   <footer class="lap text-white">
     <div class="max-w-site mx-auto px-4 sm:px-6 pt-16 pb-10 grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr_1fr]">
       <div>
-        <p class="display font-extrabold text-[2rem]">SHS <span class="font-semibold">&amp; Improvements</span></p>
+        <p class="display text-[2rem]">SHS <span class="font-semibold">&amp; Improvements</span></p>
         <p class="text-white/65 mt-2 text-sm">Smart Home Services &amp; Improvements LLC</p>
         <p class="mt-5 text-white/80 max-w-[22rem] leading-relaxed">Exterior remodeling and home renovation by a husband-and-wife team in Woodstock, GA. Licensed &amp; insured.</p>
       </div>
       <nav aria-label="Footer">
         <p class="font-semibold mb-3">Explore</p>
         <ul class="space-y-2.5 text-white/75">
-          <li><a href="#services" class="hover:text-amber">Services</a></li>
-          <li><a href="#colors" class="hover:text-amber">Try siding colors</a></li>
-          <li><a href="#why" class="hover:text-amber">Why SHS</a></li>
-          <li><a href="#work" class="hover:text-amber">Our work</a></li>
-          <li><a href="#about" class="hover:text-amber">About</a></li>
-          <li><a href="#reviews" class="hover:text-amber">Reviews</a></li>
-          <li><a href="#quote" class="hover:text-amber">Free quote</a></li>
+          <li><a href="#services" class="hover:text-brass-light">Services</a></li>
+          <li><a href="#colors" class="hover:text-brass-light">Try siding colors</a></li>
+          <li><a href="#why" class="hover:text-brass-light">Why SHS</a></li>
+          <li><a href="#work" class="hover:text-brass-light">Our work</a></li>
+          <li><a href="#about" class="hover:text-brass-light">About</a></li>
+          <li><a href="#reviews" class="hover:text-brass-light">Reviews</a></li>
+          <li><a href="#quote" class="hover:text-brass-light">Free quote</a></li>
         </ul>
       </nav>
       <div>
         <p class="font-semibold mb-3">Contact</p>
         <ul class="space-y-2.5 text-white/75">
-          <li><a href="tel:+14049967297" class="hover:text-amber">(404) 996-7297</a></li>
+          <li><a href="tel:+14049967297" class="hover:text-brass-light">(404) 996-7297</a></li>
           <li>1029 Knotts Pointe Dr<br>Woodstock, GA 30188</li>
         </ul>
       </div>
@@ -775,27 +793,27 @@
 
   <!-- Mobile sticky CTA -->
   <nav aria-label="Quick contact" class="lg:hidden fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-ink/10 px-3 pt-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))] grid grid-cols-2 gap-2.5">
-    <a href="tel:+14049967297" class="inline-flex items-center justify-center gap-2 h-[52px] rounded-full border-2 border-ink font-semibold">
+    <a href="tel:+14049967297" class="press inline-flex items-center justify-center gap-2 h-[52px] rounded-[3px] border border-ink/40 font-medium">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
       Call now
     </a>
-    <a href="#quote" class="inline-flex items-center justify-center h-[52px] rounded-full bg-amber text-ink font-semibold">Free quote</a>
+    <a href="#quote" class="press inline-flex items-center justify-center h-[52px] rounded-[3px] bg-ink text-white font-medium">Free quote</a>
   </nav>
 
   <!-- Lightbox -->
   <dialog class="bg-transparent p-0 m-auto max-w-none max-h-none w-screen h-[100dvh] text-white" aria-label="Photo viewer" data-lb>
     <div class="relative w-full h-full flex items-center justify-center px-3 sm:px-16 py-16">
       <figure class="max-w-6xl w-full flex flex-col items-center">
-        <img alt="" class="max-h-[78dvh] w-auto max-w-full rounded-xl object-contain" data-lb-img>
+        <img alt="" class="max-h-[78dvh] w-auto max-w-full rounded-md object-contain" data-lb-img>
         <figcaption class="mt-4 text-center text-white/85 max-w-[40rem]" data-lb-cap></figcaption>
       </figure>
-      <button type="button" class="absolute top-3 right-3 w-12 h-12 rounded-full bg-black/60 ring-1 ring-white/25 hover:bg-black/80 grid place-items-center" aria-label="Close photo viewer" data-lb-close>
+      <button type="button" class="absolute top-3 right-3 w-12 h-12 press rounded-[3px] bg-black/60 ring-1 ring-white/25 hover:bg-black/80 grid place-items-center" aria-label="Close photo viewer" data-lb-close>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
       </button>
-      <button type="button" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 ring-1 ring-white/25 hover:bg-black/80 grid place-items-center" aria-label="Previous photo" data-lb-prev>
+      <button type="button" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-12 h-12 press rounded-[3px] bg-black/60 ring-1 ring-white/25 hover:bg-black/80 grid place-items-center" aria-label="Previous photo" data-lb-prev>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
       </button>
-      <button type="button" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 ring-1 ring-white/25 hover:bg-black/80 grid place-items-center" aria-label="Next photo" data-lb-next>
+      <button type="button" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-12 h-12 press rounded-[3px] bg-black/60 ring-1 ring-white/25 hover:bg-black/80 grid place-items-center" aria-label="Next photo" data-lb-next>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
       </button>
     </div>
@@ -816,13 +834,13 @@
 
     // Header border on scroll
     const header = $('[data-header]');
-    const setHeader = () => { const s = window.scrollY > 8; header.classList.toggle('border-ink/10', s); header.classList.toggle('shadow-[0_6px_24px_-12px_rgba(24,35,45,.25)]', s); };
-    setHeader(); window.addEventListener('scroll', setHeader, { passive: true });
+    const setHeader = () => { header.dataset.top = String(window.scrollY < 24 && btn.getAttribute('aria-expanded') !== 'true'); };
 
     // Mobile menu
     const btn = $('[data-menu-btn]'), menu = $('[data-menu]');
     const setMenu = open => {
       menu.classList.toggle('hidden', !open);
+      setTimeout(setHeader);
       btn.setAttribute('aria-expanded', String(open));
       btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       $('[data-icon-open]', btn).classList.toggle('hidden', open);
@@ -842,6 +860,7 @@
     }));
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); } });
     window.matchMedia('(min-width: 1024px)').addEventListener('change', e => e.matches && setMenu(false));
+    setHeader(); window.addEventListener('scroll', setHeader, { passive: true });
 
     // Before / after sliders
     $$('[data-ba]').forEach(ba => {
@@ -857,8 +876,8 @@
       $$('[data-filter]').forEach(b => {
         const on = b === f;
         b.setAttribute('aria-pressed', String(on));
-        b.classList.toggle('bg-ink', on); b.classList.toggle('text-white', on); b.classList.toggle('border-ink', on);
-        b.classList.toggle('bg-white', !on); b.classList.toggle('border-ink/20', !on);
+        b.classList.toggle('border-ink', on); b.classList.toggle('text-ink', on);
+        b.classList.toggle('border-transparent', !on); b.classList.toggle('text-slatey', !on);
       });
       let shown = 0;
       items.forEach(li => {
@@ -1074,11 +1093,11 @@
           }
         }
         $('[data-open-text]', status).textContent = text;
-        $('[data-open-dot]', status).style.background = open ? '#7FD18B' : '#D2953A';
+        $('[data-open-dot]', status).style.background = open ? '#8FCB97' : '#C9A97C';
         status.hidden = false;
         $$('[data-days]').forEach(el => {
           const isToday = el.dataset.days.split(',').map(Number).includes(day);
-          el.classList.toggle('text-amber', isToday);
+          el.classList.toggle('text-brass-light', isToday);
           el.classList.toggle('font-semibold', isToday);
         });
       };

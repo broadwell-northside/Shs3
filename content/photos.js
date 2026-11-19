@@ -39,22 +39,22 @@
 module.exports = {
   // Large photo at the top of the page. srcMobile is a tall crop for phones (900 x 1200).
   hero: {
-    src: '/images/hero-farmhouse-siding.jpg',
-    srcMobile: '/images/hero-farmhouse-siding-900.jpg',
-    alt: 'White two-story farmhouse with horizontal lap siding and a wraparound front porch',
+    src: '/images/hero-estate-dusk.jpg',
+    srcMobile: '/images/hero-estate-dusk-900.jpg',
+    alt: 'Stately two-story home with stone and siding, lit up at dusk above a wide lawn',
     placeholder: true,
   },
 
-  // Photo beside "What makes us different". A crew-at-work or finished-porch shot works well.
+  // Photo beside "What makes us different". A crew-at-work or finished outdoor-living shot works well.
   why: {
-    src: '/images/porch-craftsman.jpg',
-    alt: 'Craftsman-style home with a covered front porch and tapered columns',
+    src: '/images/outdoor-room.jpg',
+    alt: 'Covered outdoor living room with a wood ceiling, fireplace and lounge seating',
     placeholder: true,
   },
 
   // Photo in "A family business". Ideally Erick and his wife, or the team on a job site.
   about: {
-    src: '/images/porch-bungalow.jpg',
+    src: '/images/craftsman-dusk.jpg',
     alt: 'Placeholder for a photo of Erick Von Borries and his wife',
     placeholderLabel: 'Placeholder: photo of Erick & family',
     placeholder: true,
@@ -62,22 +62,22 @@ module.exports = {
 
   // "Our work" gallery. Order here = order on the page.
   gallery: [
-    { src: '/images/siding-craftsman-sage.jpg', category: 'siding', size: 'large', placeholder: true,
-      alt: 'Craftsman home with sage fiber-cement siding, stone base and white trim' },
-    { src: '/images/deck-outdoor-living.jpg', category: 'decks', placeholder: true,
-      alt: 'Wood home with a wide elevated deck overlooking the yard' },
-    { src: '/images/porch-bungalow.jpg', category: 'porch', placeholder: true,
-      alt: 'Bungalow with a covered front porch and white railings' },
-    { src: '/images/roofing-crew.jpg', category: 'roofing', placeholder: true,
-      alt: 'Roofer working on a shingle roof replacement' },
-    { src: '/images/hero-farmhouse-siding.jpg', category: 'paint', placeholder: true,
-      alt: 'Freshly painted white farmhouse with lap siding and wraparound porch' },
-    { src: '/images/porch-craftsman.jpg', category: 'porch', placeholder: true,
-      alt: 'Craftsman front porch with tapered columns' },
-    { src: '/images/roofing-traditional-home.jpg', category: 'roofing', size: 'wide', placeholder: true,
-      alt: 'Two-story brick home with a new architectural shingle roof' },
-    { src: '/images/paint-modern-exterior.jpg', category: 'paint', placeholder: true,
-      alt: 'Modern home exterior with crisp white paint and wood accent panels' },
+    { src: '/images/modern-cladding-dusk.jpg', category: 'siding', size: 'large', placeholder: true,
+      alt: 'Modern home with dark and wood-tone cladding and large lit windows at dusk' },
+    { src: '/images/outdoor-room.jpg', category: 'decks', caption: 'Outdoor living', placeholder: true,
+      alt: 'Covered outdoor room with a wood ceiling, fireplace and lounge seating' },
+    { src: '/images/sunroom-enclosure.jpg', category: 'porch', placeholder: true,
+      alt: 'Enclosed sunroom with floor-to-ceiling windows and warm wood furniture' },
+    { src: '/images/estate-roofline.jpg', category: 'roofing', placeholder: true,
+      alt: 'Brick and stone estate home with steep architectural shingle rooflines' },
+    { src: '/images/painted-modern-dusk.jpg', category: 'paint', placeholder: true,
+      alt: 'Black-painted modern home with warm lit windows at dusk' },
+    { src: '/images/craftsman-porch.jpg', category: 'porch', placeholder: true,
+      alt: 'Gray craftsman home with a white-railed covered front porch' },
+    { src: '/images/craftsman-dusk.jpg', category: 'roofing', size: 'wide', placeholder: true,
+      alt: 'Wood-sided craftsman home with steep gables and glowing windows at dusk' },
+    { src: '/images/wood-dark-facade.jpg', category: 'siding', placeholder: true,
+      alt: 'Contemporary facade with vertical wood siding and dark panels' },
   ],
 
   // Before / after slider pairs (see instructions at the top). Empty = sliders hidden.
