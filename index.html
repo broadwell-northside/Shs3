@@ -29,6 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="/images/hero-farmhouse-siding.jpg" imagesrcset="/images/hero-farmhouse-siding-900.jpg 900w, /images/hero-farmhouse-siding.jpg 1920w" imagesizes="100vw">
 
+  <script>document.documentElement.classList.add('js')</script>
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
@@ -103,6 +104,24 @@
     select.field { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%2318232D' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position: right 1rem center; padding-right:2.6rem; }
 
     .gal-item[hidden] { display:none; }
+
+    /* Color visualizer */
+    [data-house] .h-siding { fill: var(--siding); transition: fill .35s ease; }
+    [data-house] .h-trim { fill: var(--trim); transition: fill .35s ease; }
+    [data-house] .h-door { fill: var(--door); transition: fill .35s ease; }
+    [data-house] .h-roof { fill: var(--roof); stroke: var(--roof); transition: fill .35s ease, stroke .35s ease; }
+    [data-house] polyline.h-roof { fill: none; }
+    .sw { position: relative; display: inline-grid; place-items: center; width: 48px; height: 48px; cursor: pointer; }
+    .sw input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .sw span { width: 40px; height: 40px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); transition: transform .15s, box-shadow .15s; }
+    .sw:hover span { transform: scale(1.06); }
+    .sw input:checked + span { box-shadow: inset 0 0 0 1px rgba(0,0,0,.15), 0 0 0 3px #fff, 0 0 0 5.5px #18232D; }
+    .sw input:focus-visible + span { outline: 3px solid #D2953A; outline-offset: 5px; }
+
+    /* Scroll reveal (only when JS runs; off for reduced motion) */
+    .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+    .js .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } }
   </style>
 
   <!-- LocalBusiness + Service structured data -->
@@ -174,6 +193,7 @@
 
       <nav class="hidden lg:flex items-center gap-7 text-[0.95rem] font-medium" aria-label="Primary">
         <a href="#services" class="hover:text-amber-deep transition-colors">Services</a>
+        <a href="#colors" class="hover:text-amber-deep transition-colors">Colors</a>
         <a href="#why" class="hover:text-amber-deep transition-colors">Why SHS</a>
         <a href="#work" class="hover:text-amber-deep transition-colors">Our work</a>
         <a href="#about" class="hover:text-amber-deep transition-colors">About</a>
@@ -194,6 +214,7 @@
     <div id="mobile-menu" class="lg:hidden hidden border-t border-ink/10 bg-white" data-menu>
       <nav class="max-w-site mx-auto px-4 py-3 flex flex-col text-lg font-medium" aria-label="Mobile">
         <a href="#services" class="py-3.5 border-b border-ink/5">Services</a>
+        <a href="#colors" class="py-3.5 border-b border-ink/5">Try siding colors</a>
         <a href="#why" class="py-3.5 border-b border-ink/5">Why SHS</a>
         <a href="#work" class="py-3.5 border-b border-ink/5">Our work</a>
         <a href="#about" class="py-3.5 border-b border-ink/5">About Erick &amp; team</a>
@@ -260,65 +281,71 @@
     <!-- ============ SERVICES ============ -->
     <section id="services" class="py-20 sm:py-28" aria-labelledby="services-title">
       <div class="max-w-site mx-auto px-4 sm:px-6">
-        <div class="grid lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-16 items-end mb-14">
+        <div class="reveal grid lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-16 items-end mb-14">
           <h2 id="services-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[14ch]">The outside of your home, done right</h2>
           <p class="text-lg text-slatey leading-relaxed max-w-[36rem]">We build with materials we'd put on our own house, and we stay on site until the work meets our standard. Here's what we do most.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0">
           <!-- Siding -->
-          <article class="group py-8 border-t-2 border-ink">
+          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.00s">
             <div class="flex items-center gap-3 mb-4">
               <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18M3 10h18M3 14h18M3 18h18"/><path d="M3 4v16h18V4"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Siding</h3>
             </div>
             <p class="text-slatey leading-relaxed">James Hardie® and HardiPlank® fiber cement in a wide range of colors and textures. Built to hold up in diverse climates and backed by a 30-year manufacturer warranty.</p>
             <p class="mt-4 text-sm font-semibold text-sage-deep">James Hardie® · HardiPlank®</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Siding">Get a siding quote</a>
           </article>
           <!-- Painting -->
-          <article class="group py-8 border-t-2 border-ink">
+          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.08s">
             <div class="flex items-center gap-3 mb-4">
               <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="15" height="6" rx="1.5"/><path d="M18 6h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-8v3"/><rect x="10" y="14" width="4" height="7" rx="1"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Exterior painting</h3>
             </div>
             <p class="text-slatey leading-relaxed">Premium Sherwin-Williams® paint sealed with MAXFLEX, a top-of-the-line caulk, for a finish that lasts and curb appeal you notice from the street.</p>
             <p class="mt-4 text-sm font-semibold text-sage-deep">Sherwin-Williams® · MAXFLEX caulking</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Exterior painting">Get a painting quote</a>
           </article>
           <!-- Decks -->
-          <article class="group py-8 border-t-2 border-ink">
+          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.16s">
             <div class="flex items-center gap-3 mb-4">
               <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 10h20M4 6h16M5 10v11M19 10v11M12 10v11M2 15h20"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Decks, pergolas &amp; enclosed porches</h3>
             </div>
             <p class="text-slatey leading-relaxed">Custom-built outdoor living spaces, from deck rebuilds and pergolas to screened and fully enclosed porches, held to the highest quality standards.</p>
             <p class="mt-4 text-sm font-semibold text-sage-deep">Custom design &amp; build</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Decks, pergolas &amp; enclosed porches">Get a deck or porch quote</a>
           </article>
           <!-- Roofing -->
-          <article class="group py-8 border-t-2 border-ink">
+          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.00s">
             <div class="flex items-center gap-3 mb-4">
               <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12 12 4l10 8"/><path d="M5 10v4M19 10v8a2 2 0 0 1-2 2"/><path d="M19 14h2v6"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Roofing &amp; gutters</h3>
             </div>
             <p class="text-slatey leading-relaxed">GAF HDZ shingles from America's largest roofing manufacturer, plus gutters, downspouts and LeafTek leaf covers that keep water moving away from your home.</p>
             <p class="mt-4 text-sm font-semibold text-sage-deep">GAF HDZ · LeafTek</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Roofing &amp; gutters">Get a roofing quote</a>
           </article>
           <!-- Kitchen & bath -->
-          <article class="group py-8 border-t-2 border-ink">
+          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.08s">
             <div class="flex items-center gap-3 mb-4">
               <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M6 12V5a2 2 0 0 1 3.5-1.3"/><path d="M7 20l-1 2M17 20l1 2"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Kitchen &amp; bath remodeling</h3>
             </div>
             <p class="text-slatey leading-relaxed">Cabinets, counters and full remodels inside the home, with the same care, clean job sites and clear communication we bring to every exterior.</p>
             <p class="mt-4 text-sm font-semibold text-sage-deep">Interior renovation</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Kitchen &amp; bath remodeling">Get a remodeling quote</a>
           </article>
           <!-- Landscape -->
-          <article class="group py-8 border-t-2 border-ink">
+          <article class="reveal group py-8 border-t-2 border-ink" style="--d:0.16s">
             <div class="flex items-center gap-3 mb-4">
               <span class="grid place-items-center w-12 h-12 rounded-xl bg-primer text-ink group-hover:bg-amber transition-colors"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22V12"/><path d="M12 12c-4 0-7-3-7-7 4 0 7 3 7 7zM12 14c3 0 6-2.5 6-6-3 0-6 2.5-6 6z"/><path d="M4 22h16"/></svg></span>
               <h3 class="semi text-[1.45rem] font-bold">Landscape &amp; outdoor design</h3>
             </div>
             <p class="text-slatey leading-relaxed">Outdoor spaces planned to work with your new deck, porch or exterior, so the whole property comes together as one finished look.</p>
             <p class="mt-4 text-sm font-semibold text-sage-deep">Outdoor living</p>
+            <a href="#quote" class="mt-3 inline-flex items-center min-h-[44px] font-semibold text-ink underline decoration-amber decoration-2 underline-offset-[6px] hover:text-amber-deep" data-pick-service="Landscape &amp; outdoor design">Get an outdoor design quote</a>
           </article>
         </div>
 
@@ -345,6 +372,100 @@
       </div>
     </section>
 
+    <!-- ============ COLOR VISUALIZER ============ -->
+    <section id="colors" class="py-20 sm:py-28 bg-primer" aria-labelledby="colors-title">
+      <div class="max-w-site mx-auto px-4 sm:px-6">
+        <div class="reveal max-w-[40rem] mb-10 lg:mb-14">
+          <h2 id="colors-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem]">Try your colors first</h2>
+          <p class="mt-5 text-lg text-slatey leading-relaxed">Tap a color to try it on the house. When you like what you see, send it with your quote request and we'll bring real samples to your estimate.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-[1.3fr_1fr] gap-6 lg:gap-14 items-start">
+          <figure class="sticky top-[72px] lg:top-28 z-10 rounded-2xl bg-white p-3 sm:p-6 shadow-[0_18px_40px_-28px_rgba(24,35,45,.55)]">
+            <svg viewBox="0 0 640 440" class="w-full h-auto block" role="img" aria-labelledby="house-caption" data-house
+                 style="--siding:#8E9B83;--trim:#F7F6F1;--door:#1D2125;--roof:#3B3D40">
+              <defs>
+                <pattern id="lapPat" width="8" height="13" patternUnits="userSpaceOnUse"><rect width="8" height="1.6" y="11.4" fill="rgba(0,0,0,.2)"/><rect width="8" height="1" fill="rgba(255,255,255,.14)"/></pattern>
+                <pattern id="shakePat" width="18" height="32" patternUnits="userSpaceOnUse"><rect width="18" height="1.4" y="14.6" fill="rgba(0,0,0,.2)"/><rect width="18" height="1.4" y="30.6" fill="rgba(0,0,0,.2)"/><rect x="8" width="1.2" height="15" fill="rgba(0,0,0,.13)"/><rect x="17" y="16" width="1.2" height="15" fill="rgba(0,0,0,.13)"/></pattern>
+                <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C97AA"/><stop offset=".55" stop-color="#3B5468"/><stop offset="1" stop-color="#22374A"/></linearGradient>
+              </defs>
+              <rect x="0" y="392" width="640" height="48" rx="6" fill="#B4C2A5"/>
+              <rect x="430" y="70" width="38" height="100" fill="#7A6255"/>
+              <rect x="426" y="64" width="46" height="10" fill="#5E4C42"/>
+              <!-- body -->
+              <rect class="h-siding" x="110" y="190" width="420" height="190"/>
+              <rect x="110" y="190" width="420" height="190" fill="url(#lapPat)"/>
+              <polygon class="h-siding" points="110,190 320,80 530,190"/>
+              <polygon points="110,190 320,80 530,190" fill="url(#shakePat)"/>
+              <!-- roof + trim -->
+              <polyline class="h-roof" points="86,204 320,68 554,204" fill="none" stroke-width="26" stroke-linejoin="miter"/>
+              <polyline points="86,204 320,68 554,204" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="3" transform="translate(0,13)"/>
+              <rect class="h-trim" x="104" y="186" width="432" height="8"/>
+              <rect class="h-trim" x="110" y="194" width="12" height="186"/>
+              <rect class="h-trim" x="518" y="194" width="12" height="186"/>
+              <!-- gable window -->
+              <rect class="h-trim" x="290" y="118" width="60" height="50" rx="2"/>
+              <rect x="296" y="124" width="48" height="38" fill="url(#glass)"/>
+              <rect class="h-trim" x="318.5" y="124" width="3" height="38"/>
+              <!-- left window -->
+              <rect class="h-door" x="130" y="228" width="18" height="108"/>
+              <rect class="h-door" x="236" y="228" width="18" height="108"/>
+              <rect class="h-trim" x="150" y="226" width="84" height="112" rx="2"/>
+              <rect x="158" y="234" width="68" height="96" fill="url(#glass)"/>
+              <rect class="h-trim" x="190.5" y="234" width="3" height="96"/><rect class="h-trim" x="158" y="280.5" width="68" height="3"/>
+              <!-- right window -->
+              <rect class="h-door" x="386" y="228" width="18" height="108"/>
+              <rect class="h-door" x="492" y="228" width="18" height="108"/>
+              <rect class="h-trim" x="406" y="226" width="84" height="112" rx="2"/>
+              <rect x="414" y="234" width="68" height="96" fill="url(#glass)"/>
+              <rect class="h-trim" x="446.5" y="234" width="3" height="96"/><rect class="h-trim" x="414" y="280.5" width="68" height="3"/>
+              <!-- porch -->
+              <rect class="h-roof" x="242" y="204" width="156" height="14"/>
+              <rect class="h-trim" x="248" y="217" width="144" height="8"/>
+              <rect class="h-trim" x="256" y="225" width="12" height="145"/>
+              <rect class="h-trim" x="372" y="225" width="12" height="145"/>
+              <!-- door -->
+              <rect class="h-trim" x="290" y="244" width="60" height="126" rx="2"/>
+              <rect class="h-door" x="297" y="251" width="46" height="119"/>
+              <rect x="303" y="260" width="34" height="42" fill="rgba(0,0,0,.14)"/>
+              <rect x="303" y="310" width="34" height="52" fill="rgba(0,0,0,.14)"/>
+              <circle cx="336" cy="316" r="2.6" fill="#D9B46A"/>
+              <!-- foundation, steps, plants -->
+              <rect x="104" y="370" width="432" height="24" fill="#8F8C86"/>
+              <rect x="276" y="370" width="88" height="11" fill="#B1AEA8"/>
+              <rect x="268" y="381" width="104" height="13" fill="#A19E98"/>
+              <ellipse cx="160" cy="390" rx="46" ry="22" fill="#4E6A45"/><ellipse cx="216" cy="395" rx="30" ry="16" fill="#5D7B52"/>
+              <ellipse cx="480" cy="390" rx="46" ry="22" fill="#4E6A45"/><ellipse cx="424" cy="395" rx="30" ry="16" fill="#5D7B52"/>
+            </svg>
+            <figcaption id="house-caption" class="mt-3 px-1 text-[0.95rem] text-slatey" aria-live="polite" data-house-caption>Sage green siding, bright white trim, black door and shutters, charcoal roof</figcaption>
+          </figure>
+
+          <div class="space-y-7">
+            <fieldset>
+              <legend class="font-semibold text-lg mb-3">Siding <span class="font-normal text-slatey" data-pick-name="siding">Sage green</span></legend>
+              <div class="flex flex-wrap gap-2.5" data-swatches="siding"></div>
+            </fieldset>
+            <fieldset>
+              <legend class="font-semibold text-lg mb-3">Trim <span class="font-normal text-slatey" data-pick-name="trim">Bright white</span></legend>
+              <div class="flex flex-wrap gap-2.5" data-swatches="trim"></div>
+            </fieldset>
+            <fieldset>
+              <legend class="font-semibold text-lg mb-3">Door &amp; shutters <span class="font-normal text-slatey" data-pick-name="door">Black</span></legend>
+              <div class="flex flex-wrap gap-2.5" data-swatches="door"></div>
+            </fieldset>
+            <fieldset>
+              <legend class="font-semibold text-lg mb-3">Roof <span class="font-normal text-slatey" data-pick-name="roof">Charcoal</span></legend>
+              <div class="flex flex-wrap gap-2.5" data-swatches="roof"></div>
+            </fieldset>
+            <div class="pt-2">
+              <button type="button" class="inline-flex items-center justify-center rounded-full bg-ink text-white font-semibold text-[1.05rem] h-14 px-8 hover:bg-ink-3 transition-colors w-full sm:w-auto" data-colors-to-quote>Add these colors to my quote</button>
+              <p class="mt-3 text-sm text-slatey">Colors on screen are approximate. Final colors are chosen from physical samples.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ WHY SHS ============ -->
     <section id="why" class="bg-ink text-white" aria-labelledby="why-title">
       <div class="grid lg:grid-cols-2">
@@ -354,7 +475,7 @@
           <span class="ph">Placeholder photo</span>
         </div>
         <div class="px-4 sm:px-10 lg:px-16 py-16 sm:py-24 max-w-[44rem]">
-          <h2 id="why-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem]">What makes us different</h2>
+          <h2 id="why-title" class="reveal display font-extrabold text-[2.5rem] sm:text-[3.4rem]">What makes us different</h2>
           <p class="mt-5 text-lg text-white/75 leading-relaxed">You'll know the price before we start, and you'll know who's responsible for the work every day until it's done.</p>
           <ul class="mt-10 space-y-7">
             <li class="flex gap-4">
@@ -385,7 +506,7 @@
     <!-- ============ GALLERY ============ -->
     <section id="work" class="py-20 sm:py-28 bg-primer" aria-labelledby="work-title">
       <div class="max-w-site mx-auto px-4 sm:px-6">
-        <div class="flex flex-col lg:flex-row lg:items-end gap-6 justify-between mb-10">
+        <div class="reveal flex flex-col lg:flex-row lg:items-end gap-6 justify-between mb-10">
           <div>
             <h2 id="work-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem]">Our work</h2>
             <p class="mt-4 text-lg text-slatey max-w-[36rem] leading-relaxed">Drag the sliders to compare before and after, or tap any photo to see it full size.</p>
@@ -511,7 +632,7 @@
         </div>
 
         <div>
-          <h2 id="about-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[14ch]">A family business, built on referrals</h2>
+          <h2 id="about-title" class="reveal display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[14ch]">A family business, built on referrals</h2>
           <div class="mt-8 space-y-5 text-lg leading-[1.7] text-ink/85 max-w-[38rem]">
             <p>SHS &amp; Improvements is Erick Von Borries and his wife, a husband-and-wife team who have been remodeling homes for more than ten years. We're a small company on purpose. It means one of us is involved in every job, and the people you meet at the estimate are the people who answer for the finished work.</p>
             <p>We treat your home like it's our own: protecting your landscaping, cleaning up at the end of every day, and paying attention to the details most people never see, like flashing behind siding, solid footings under a deck and a clean caulk line.</p>
@@ -548,7 +669,7 @@
     -->
     <section id="reviews" class="py-20 sm:py-28 bg-primer" aria-labelledby="reviews-title">
       <div class="max-w-site mx-auto px-4 sm:px-6">
-        <div class="grid lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-16 items-end mb-12">
+        <div class="reveal grid lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-16 items-end mb-12">
           <h2 id="reviews-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[16ch]">Neighbors telling neighbors</h2>
           <div>
             <p class="inline-flex items-center gap-2 rounded-full bg-sage-soft text-sage-deep font-semibold px-4 py-2">
@@ -607,7 +728,7 @@
     <section id="quote" class="py-20 sm:py-28" aria-labelledby="quote-title">
       <div class="max-w-site mx-auto px-4 sm:px-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16">
         <div>
-          <h2 id="quote-title" class="display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[13ch]">Get a free quote</h2>
+          <h2 id="quote-title" class="reveal display font-extrabold text-[2.5rem] sm:text-[3.4rem] lg:text-[4rem] max-w-[13ch]">Get a free quote</h2>
           <p class="mt-5 text-lg text-slatey max-w-[34rem] leading-relaxed">Tell us a little about your project. Erick will get back to you to set up a time to see it in person.</p>
 
           <form class="mt-10 grid sm:grid-cols-2 gap-x-5 gap-y-5" novalidate data-quote-form>
@@ -676,6 +797,7 @@
               <span class="text-white/70 text-sm">Call or text</span>
               <span class="display block font-extrabold text-[2.4rem] text-amber group-hover:text-white transition-colors">(404) 996-7297</span>
             </a>
+            <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm font-medium" data-open-status hidden><span class="w-2.5 h-2.5 rounded-full" data-open-dot></span><span data-open-text></span></p>
             <dl class="mt-7 space-y-5 text-[0.98rem]">
               <div>
                 <dt class="text-white/60 text-sm">Address</dt>
@@ -683,7 +805,7 @@
               </div>
               <div>
                 <dt class="text-white/60 text-sm">Hours</dt>
-                <dd class="mt-1 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1"><span>Mon–Fri</span><span>8:00 AM – 5:00 PM</span><span>Saturday</span><span>9:00 AM – 12:00 PM</span><span>Sunday</span><span>Closed</span></dd>
+                <dd class="mt-1 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1"><span data-days="1,2,3,4,5">Mon–Fri</span><span data-days="1,2,3,4,5">8:00 AM – 5:00 PM</span><span data-days="6">Saturday</span><span data-days="6">9:00 AM – 12:00 PM</span><span data-days="0">Sunday</span><span data-days="0">Closed</span></dd>
               </div>
               <div>
                 <dt class="text-white/60 text-sm">Service area</dt>
@@ -711,6 +833,7 @@
         <p class="font-semibold mb-3">Explore</p>
         <ul class="space-y-2.5 text-white/75">
           <li><a href="#services" class="hover:text-amber">Services</a></li>
+          <li><a href="#colors" class="hover:text-amber">Try siding colors</a></li>
           <li><a href="#why" class="hover:text-amber">Why SHS</a></li>
           <li><a href="#work" class="hover:text-amber">Our work</a></li>
           <li><a href="#about" class="hover:text-amber">About</a></li>
@@ -926,6 +1049,108 @@
       success.classList.remove('hidden'); success.focus();
       if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) window.location.href = sms;
     });
+
+    // Helpers shared by the visualizer and service links
+    const serviceSelect = form.elements.service;
+    const details = form.elements.details;
+    const pickService = value => {
+      serviceSelect.value = value;
+      serviceSelect.setAttribute('aria-invalid', 'false');
+      $('#e-service').classList.add('hidden');
+    };
+    const goToForm = () => {
+      $('#quote').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      const firstEmpty = ['name', 'phone', 'email'].map(n => form.elements[n]).find(el => !el.value);
+      setTimeout(() => (firstEmpty || details).focus({ preventScroll: true }), 600);
+    };
+
+    // Service card links pre-select the service
+    $$('[data-pick-service]').forEach(a => a.addEventListener('click', e => {
+      e.preventDefault();
+      pickService(a.dataset.pickService.replace(/&amp;/g, '&'));
+      goToForm();
+    }));
+
+    // Color visualizer
+    const PALETTE = {
+      siding: [['Bright white', '#EEEDE6'], ['Soft gray', '#B9BBB6'], ['Sage green', '#8E9B83'], ['Slate blue', '#5E7385'], ['Deep navy', '#2E3E50'], ['Charcoal', '#4A4E52'], ['Khaki brown', '#9C8B70'], ['Barn red', '#7A3B33']],
+      trim:   [['Bright white', '#F7F6F1'], ['Cream', '#E8DFC6'], ['Light gray', '#C9CBC8'], ['Black', '#1F2326']],
+      door:   [['Black', '#1D2125'], ['Navy', '#1F3247'], ['Red', '#8E2F2A'], ['Sage', '#6E7D63'], ['Honey', '#C98A2E'], ['Natural wood', '#8B5A33']],
+      roof:   [['Charcoal', '#3B3D40'], ['Weathered wood', '#6B6257'], ['Brown', '#4E3B2E'], ['Slate gray', '#5A626A']]
+    };
+    const house = $('[data-house]');
+    const caption = $('[data-house-caption]');
+    const chosen = { siding: 'Sage green', trim: 'Bright white', door: 'Black', roof: 'Charcoal' };
+    const describe = () => `${chosen.siding} siding, ${chosen.trim.toLowerCase()} trim, ${chosen.door.toLowerCase()} door and shutters, ${chosen.roof.toLowerCase()} roof`;
+    if (house) {
+      Object.entries(PALETTE).forEach(([group, colors]) => {
+        const wrap = $(`[data-swatches="${group}"]`);
+        colors.forEach(([name, hex]) => {
+          const label = document.createElement('label');
+          label.className = 'sw';
+          label.title = name;
+          label.innerHTML = `<input type="radio" name="color-${group}" value="${hex}"${chosen[group] === name ? ' checked' : ''}><span style="background:${hex}"></span><span class="sr-only">${name}</span>`;
+          label.querySelector('input').addEventListener('change', () => {
+            chosen[group] = name;
+            house.style.setProperty('--' + group, hex);
+            $(`[data-pick-name="${group}"]`).textContent = name;
+            caption.textContent = describe();
+          });
+          wrap.appendChild(label);
+        });
+      });
+      $('[data-colors-to-quote]').addEventListener('click', () => {
+        if (!serviceSelect.value) pickService('Siding');
+        const line = `Color idea: ${describe()}.`;
+        details.value = /^Color idea:.*$/m.test(details.value)
+          ? details.value.replace(/^Color idea:.*$/m, line)
+          : (line + (details.value ? '\n' + details.value : ''));
+        goToForm();
+      });
+    }
+
+    // Live open / closed status (Eastern Time)
+    const status = $('[data-open-status]');
+    if (status && window.Intl) {
+      const HOURS = { 1: [480, 1020], 2: [480, 1020], 3: [480, 1020], 4: [480, 1020], 5: [480, 1020], 6: [540, 720] };
+      const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const fmt = m => { const h = Math.floor(m / 60), mm = m % 60; return `${h % 12 || 12}${mm ? ':' + String(mm).padStart(2, '0') : ''} ${h < 12 ? 'AM' : 'PM'}`; };
+      const update = () => {
+        const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(p => [p.type, p.value]));
+        const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday);
+        const mins = (+parts.hour % 24) * 60 + +parts.minute;
+        const today = HOURS[day];
+        let open = false, text;
+        if (today && mins >= today[0] && mins < today[1]) {
+          open = true; text = `Open now until ${fmt(today[1])}`;
+        } else {
+          for (let i = 0; i < 8; i++) {
+            const d = (day + i) % 7, h = HOURS[d];
+            if (h && (i > 0 || mins < h[0])) { text = `Closed now. Opens ${i === 0 ? 'today' : i === 1 ? 'tomorrow' : DAYS[d]} at ${fmt(h[0])}`; break; }
+          }
+        }
+        $('[data-open-text]', status).textContent = text;
+        $('[data-open-dot]', status).style.background = open ? '#7FD18B' : '#D2953A';
+        status.hidden = false;
+        $$('[data-days]').forEach(el => {
+          const isToday = el.dataset.days.split(',').map(Number).includes(day);
+          el.classList.toggle('text-amber', isToday);
+          el.classList.toggle('font-semibold', isToday);
+        });
+      };
+      update(); setInterval(update, 60000);
+    }
+
+    // Scroll reveal
+    const reveals = $$('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(entries => entries.forEach(en => {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      }), { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      reveals.forEach(el => io.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('in'));
+    }
   })();
   </script>
 </body>
