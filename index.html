@@ -655,7 +655,7 @@
               <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-full bg-amber text-ink font-semibold text-[1.05rem] h-14 px-9 hover:bg-[#E0A54C] transition-colors disabled:opacity-60" data-submit>
                 <span data-submit-label>Send my quote request</span>
               </button>
-              <p class="text-sm text-slatey">Prefer to talk? <a href="tel:+14049967297" class="font-semibold text-ink underline underline-offset-4">Call (404) 996-7297</a></p>
+              <p class="text-sm text-slatey">Prefer to talk? <a href="tel:+14049967297" class="inline-block py-3 font-semibold text-ink underline underline-offset-4">Call (404) 996-7297</a></p>
             </div>
 
             <div class="sm:col-span-2 hidden rounded-2xl border-2 border-sage bg-sage-soft p-6" role="status" aria-live="polite" tabindex="-1" data-form-success>
@@ -802,7 +802,17 @@
       $('[data-icon-close]', btn).classList.toggle('hidden', !open);
     };
     btn.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
-    $$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+    // Close the menu first, then scroll, so the collapsing menu doesn't shift the landing spot
+    $$('a', menu).forEach(a => a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      setMenu(false);
+      if (!target) return;
+      e.preventDefault();
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        history.pushState(null, '', a.getAttribute('href'));
+      });
+    }));
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); } });
     window.matchMedia('(min-width: 1024px)').addEventListener('change', e => e.matches && setMenu(false));
 
