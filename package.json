@@ -1,0 +1,14 @@
+{
+  "name": "shs-improvements-site",
+  "private": true,
+  "description": "SHS & Improvements website (static HTML + compiled Tailwind + one Vercel function for the quote form)",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
