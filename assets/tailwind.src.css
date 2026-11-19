@@ -25,15 +25,15 @@ body { overflow-x: clip; font-family: 'Archivo', system-ui, sans-serif; font-var
 /* Header: transparent over the hero photo, solid once you scroll or open the menu */
 [data-header] { color: var(--ink); background: rgba(255,255,255,.97); -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid rgba(21,29,37,.08); transition: background-color .35s ease, color .35s ease, border-color .35s ease; }
-[data-header][data-top="true"] { color: #fff; background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom-color: transparent; }
+.js [data-header][data-top="true"] { color: #fff; background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom-color: transparent; }
 [data-header] .hdr-sub { color: #5A636B; }
-[data-header][data-top="true"] .hdr-sub { color: rgba(255,255,255,.72); }
+.js [data-header][data-top="true"] .hdr-sub { color: rgba(255,255,255,.72); }
 [data-header] .hdr-call { background: var(--ink); color: #fff; border: 1px solid var(--ink); }
 [data-header] .hdr-call:hover { background: #2B3843; }
-[data-header][data-top="true"] .hdr-call { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.45); }
-[data-header][data-top="true"] .hdr-call:hover { background: rgba(255,255,255,.16); border-color: #fff; }
+.js [data-header][data-top="true"] .hdr-call { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.45); }
+.js [data-header][data-top="true"] .hdr-call:hover { background: rgba(255,255,255,.16); border-color: #fff; }
 [data-header] .hdr-menu { border: 1px solid rgba(21,29,37,.18); }
-[data-header][data-top="true"] .hdr-menu { border-color: rgba(255,255,255,.45); }
+.js [data-header][data-top="true"] .hdr-menu { border-color: rgba(255,255,255,.45); }
 .nav-link { position: relative; padding: .4rem 0; opacity: .88; transition: opacity .2s; }
 .nav-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
 @media (hover: hover) { .nav-link:hover { opacity: 1; } .nav-link:hover::after { transform: scaleX(1); } }
